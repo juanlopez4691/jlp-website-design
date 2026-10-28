@@ -29,7 +29,7 @@ One quote taken from a recommendation: `quote-big` (36, weight 300), navy, max 8
 Eyebrow "Selected work", `h2` "Things I've built", then two columns of work cards, gap 24, three rows (heights 270, 294, 270; the row takes the tallest card). Card: mint fill, 8px radius, padding 24, gap 16. Contents in order: client name (`tag`, uppercase, plain text), `h3-card`, `body-sm`, `result` line, chips (pills). Chips stay at the bottom. Then `sub` "More work" and three outline cards (1.5px mint border, transparent, mint text), same padding.
 
 ## Recommendations (saffron band)
-Eyebrow, `h2` "What people say about me". Featured quote: navy fill, mint text, `quote-big`, `radius-lg`, padding 48. Under it four white cards (two columns, gap 24, `radius-lg`, padding 32): quote first, then the author pinned to the bottom (50px round photo, name `lead` at weight 600 with a 16px external-link icon linking to LinkedIn, role `body-sm`, 8px between photo and text). Bottom right: link "Read them all on LinkedIn" with the same icon (`button` weight 600, navy).
+Eyebrow, `h2` "What people say about me". Featured quote: navy fill, mint text, `quote-big`, `radius-lg`, padding 48. Under it four white cards (two columns, gap 24, `radius-lg`, padding 32): quote first, then the author pinned to the bottom (50px round photo centred vertically against the name and role, name `lead` at weight 600 with a 16px external-link icon linking to LinkedIn, role `body-sm`, 8px between photo and text). Bottom right: link "Read them all on LinkedIn" with the same icon (`button` weight 600, navy).
 
 ## How I work (coral band)
 Eyebrow "Process", `h2` "How I work". First, four numbered steps in a row (gap 40, 258px each): 2px navy rule, title "1. Listen and learn", "2. Plan and propose", "3. Build and verify", "4. Launch and support" in `h3-card` (24), then `body-sm`. Then, 64px below, four principles in two columns (gap 40): title `h3-service` (24) and a paragraph. Principles: I own the technical side end to end; I build for real use; Tests and static analysis in the pipeline; AI is part of my daily workflow.
@@ -52,7 +52,7 @@ Same bands in the same order, one column, built on `Home / base 390`. Side paddi
 - **Header:** "EN / ES" (`nav`) on the left, `menu-button` on the right, no nav links and no brand name (the name is in the hero title). The open menu is a second frame (`Menu / base 390 (open)`): saffron panel, same header with `menu-button-close` on the right, then the seven links in `h3-service` (24 gap).
 - **Hero:** no woodcut. Availability pill on one line with shorter copy, "Open to freelance and full-time work" (the full text wraps on 390; keep it as a separate short string for i18n), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
 - **Facts:** Core stack on its own row, then two columns of 151 (Experience and Clients, Based in and Languages), gap 24.
-- **Cards:** services, work, "More work" and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards; cards grow to fit their text. Chips wrap.
+- **Cards:** services, work, "More work" and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards (no author photo); cards grow to fit their text. Chips wrap.
 - **Quote band:** the quote mark (96) above the text, everything left-aligned; author and role on separate lines (no leading dot).
 - **How I work:** four steps stacked (gap 32), then the four principles stacked (gap 24).
 - **Experience:** the git log line stays on the left (32 wide); the date pill sits above the title and text. Each row is as tall as its content, so spine and tick follow it.
@@ -66,7 +66,7 @@ Same bands in the same order, built on `Home / md 768` (open menu: `Menu / md 76
 - **Header:** same as phone: "EN / ES" left, `menu-button` right; the seven links only appear from `lg` (1024px).
 - **Hero:** no woodcut (as on phone). One text column 560 wide, buttons side by side (gap 16).
 - **Facts:** Core stack on its own row, then four columns of 158 (gap 24).
-- **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards.
+- **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards. No author photo on tablet.
 - **Quote band:** mark and text side by side, text 30 light.
 - **How I work:** the four steps in a 2 x 2 grid (336 each, gap 32), the four principles in two columns.
 - **Experience:** git log as on desktop with the 176px date column, text column 432.
