@@ -1,6 +1,6 @@
-# Design system
+# lojopez.dev design system
 
-Source of truth for visuals: the Penpot file (foundations, components, Home). This folder is the copy the code reads.
+Source of truth for visuals: the Penpot file (foundations, components, Home). This repo is the written copy of it, kept apart from the code repo (`jlp-website`).
 
 - `tokens.json`: design tokens (colour, type, spacing, radius, layout).
 - `penpot-tokens.json`: the same tokens in the format Penpot imports.
