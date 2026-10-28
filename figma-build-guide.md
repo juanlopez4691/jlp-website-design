@@ -14,7 +14,7 @@ A pointed arrow (96 x 40, concave quarter-ellipse sides) hangs from the top edge
 A separate full-width band, not part of the hero. Saffron fill (`surface.hero`), 32px padding top and bottom, nav vertically centred, same 1152px container. Seven nav links (`nav`, 32px gaps) on the left: Services, Work, Recommendations, Process, Experience, Stack, Contact. "EN / ES" on the right.
 
 ## Hero (saffron)
-Two columns, gap 32, aligned to the top. Left (about 463px wide, 16px gap): availability pill (navy fill, mint text, saffron dot 10px), `h1` "Hi, I'm Joan López" (96px, line height 0.95), `role` "Senior web developer." (24px, 500), a 24px bold tagline (`h3-service` style: "I forge reliable sites with WordPress, WooCommerce, Laravel and Statamic."), `lead` (18px) and two square buttons: "Tell me about your project" (primary navy) and "Download CV" (outline navy). Right: the woodcut, 657x522, transparent PNG or WebP, navy ink, never cropped. Band padding: 48 top, 80 bottom. Spacing in the text column (px, below each item): pill 12, `h1` 20, `role` 20, tagline 12, `lead` 16.
+Two columns, gap 32, aligned to the top. Left (about 463px wide, 16px gap): availability pill (navy fill, mint text, saffron dot 10px), `h1` "Hi, I'm Joan López" (96px, line height 0.95), `role` "Senior web developer." (24px, 500), a 24px bold tagline (`h3-service` style: "I forge reliable sites with WordPress, WooCommerce, Laravel and Statamic."), `lead` (18px) and two square buttons: "Tell me about your project" (primary navy) and "Download my CV" (outline navy). Right: the woodcut, 657x522, transparent PNG or WebP, navy ink, never cropped. Band padding: 48 top, 80 bottom. Spacing in the text column (px, below each item): pill 12, `h1` 20, `role` 20, tagline 12, `lead` 16.
 
 ## Facts stripe (navy, below the hero)
 Full-width navy band (`surface.stack`), padding 32 top and bottom, same container. Five plain columns, each a `fact-label` label in saffron above a value in `lead` (mint). Tailwind: `grid grid-cols-12 gap-x-8 gap-y-6`, spans 3, 2, 2, 2, 3 (Core stack, Experience, Clients, Based in, Languages; ordered by relevance to a client).
@@ -44,4 +44,32 @@ Eyebrow "Tech stack" in saffron, `h2` "Tools I work with", auto-fit columns of 3
 Eyebrow, then "Let's talk about what you're building." and the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background: low-contrast engraving, mint on transparent, behind the text.
 
 ## Footer (navy)
-One row, space-between, padding 24 top and bottom. Left group: copyright, Download CV, GitHub. Right group: Legal notice, Privacy, Cookies. Items in each group are separated by a bullet (`•`) with 12px on each side.
+One row, space-between, padding 24 top and bottom, three parts: Download my CV and GitHub on the left, Legal notice, Privacy and Cookies in the middle, the copyright on the right. Items in a group are separated by a bullet (`•`) with 12px on each side.
+
+## Phone (390px, `base`)
+Same bands in the same order, one column, built on `Home / base 390`. Side padding 32 (container 326), band vertical padding 64 (`space-16`), same `surface.*` fills, arrow centred (96 x 40 stays). Only the Display styles shrink (see "Display mobile" in `tokens.json`): h1 48, h2 36, mail 30, quote-big 24; every other style keeps its desktop size.
+
+- **Header:** "EN / ES" (`nav`) on the left, `menu-button` on the right, no nav links and no brand name (the name is in the hero title). The open menu is a second frame (`Menu / base 390 (open)`): saffron panel, same header with `menu-button-close` on the right, then the seven links in `h3-service` (24 gap).
+- **Hero:** no woodcut. Pill (text wraps), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
+- **Facts:** Core stack on its own row, then two columns of 151 (Experience and Clients, Based in and Languages), gap 24.
+- **Cards:** services, work, "More work" and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards; cards grow to fit their text. Chips wrap.
+- **Quote band:** the quote mark (96) above the text, everything left-aligned; author and role on separate lines (no leading dot).
+- **How I work:** four steps stacked (gap 32), then the four principles stacked (gap 24).
+- **Experience:** the git log line stays on the left (32 wide); the date pill sits above the title and text. Each row is as tall as its content, so spine and tick follow it.
+- **Stack:** groups stacked, chips wrap.
+- **Contact:** title (h2 mobile) and address (mail mobile) stacked, buttons stacked at full width, text below. No background engraving on phones.
+- **Footer:** three rows: copyright, then Download my CV and GitHub, then Legal notice, Privacy and Cookies; each row wraps if needed.
+
+## Tablet (768px, `md`)
+Same bands in the same order, built on `Home / md 768` (open menu: `Menu / md 768 (open)`). Side padding 32 (container 704), band padding 80, same `surface.*` fills, arrow centred. Display styles use `Display tablet` (h1 60, h2 48, mail 48, quote-big 30); everything else keeps its desktop size.
+
+- **Header:** same as phone: "EN / ES" left, `menu-button` right; the seven links only appear from `lg` (1024px).
+- **Hero:** no woodcut (as on phone). One text column 560 wide, buttons side by side (gap 16).
+- **Facts:** Core stack on its own row, then four columns of 158 (gap 24).
+- **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards.
+- **Quote band:** mark and text side by side, text 30 light.
+- **How I work:** the four steps in a 2 x 2 grid (336 each, gap 32), the four principles in two columns.
+- **Experience:** git log as on desktop with the 176px date column, text column 432.
+- **Stack:** two columns of 340.
+- **Contact:** title (h2 tablet) and address (mail tablet) stacked, buttons side by side. The background engraving keeps its desktop position, anchored to the right edge of the band.
+- **Footer:** one row as on desktop: Download my CV and GitHub, legal links, copyright.

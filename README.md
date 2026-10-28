@@ -4,7 +4,7 @@ Color blocks: a bright, flat system for the portfolio of Joan López, a senior f
 
 ## Content fundamentals
 
-- First person, direct. "Hi, I'm Joan López." "I take care of the technical side, from architecture to launch, so your project works on day one and stays performant, secure and easy to maintain."
+- First person, direct. "Hi, I'm Joan López." "I take care of the technical side, from architecture to launch, so your project works on day one and stays fast, secure and easy to maintain."
 - Short sentences with concrete nouns: Statamic, WooCommerce, Laravel, TicketBAI. No sales language, no superlatives.
 - No em dashes or en dashes. Dates read "Jan 2021 to Present".
 - Sentence case for titles and buttons: "Get in touch", "Email me". Uppercase only for eyebrows, client tags and fact labels.
@@ -20,7 +20,7 @@ Color blocks: a bright, flat system for the portfolio of Joan López, a senior f
 
 **Type.** Familjen Grotesk (700, tight tracking) for display and titles. Figtree for text, labels and buttons, for the contact address at weight 400 (`mail`) and for the featured quote at weight 300 (`quote-big`). Both from Google Fonts. Sizes are Tailwind defaults: h1 `text-8xl` (96px, line height 0.95), h2 `text-6xl` (60px), role and card titles `text-2xl` (24px), hero lead `text-lg` (18px). Titles tighten as they grow: h1 -2.4px tracking, h2 -1.5px.
 
-**Long-form pages.** Blog, case studies and legal pages use the `Content` styles: h1 to h6 in Familjen Grotesk 700, body in Figtree 18px with line height 1.625, a 65ch reading column, and the prose rules in `tokens.json`. Everything maps to default Tailwind classes (`text-lg leading-relaxed`, `max-w-prose`, `space-y-6`). Sizes step at `md` (768px) instead of scaling fluidly, so Tailwind needs no custom values.
+**Long-form pages.** Blog, case studies and legal pages use the `Content` styles: h1 to h6 in Familjen Grotesk 700, body in Figtree 18px with line height 1.625, a 65ch reading column, and the prose rules in `tokens.json`. Everything maps to default Tailwind classes (`text-lg leading-relaxed`, `max-w-prose`, `space-y-6`). Sizes step at `md` (768px) instead of scaling fluidly, so Tailwind needs no custom values. Only the Display styles shrink: `Display tablet` at md (h1 60, h2 48, mail 48, quote-big 30) and `Display mobile` below it (h1 48, h2 36, mail 30, quote-big 24).
 
 **Layout.** One container (`container`, 1152px) inside full-bleed bands. Bands use `space-20` vertical padding. Cards sit in auto-fit grids with a `space-5` gap. Hero: nav left and language switch right, then text left and engraving right (the image is as tall as the text block and is never cropped; transparent woodcut, navy ink). Under the hero, a full-width navy stripe holds the key facts as five plain label and value columns (no pills), inside the same 1152px container. Cards in one row share the height of the tallest card (service cards are a fixed 182px); client name and tags, or the author and avatar, stay pinned to the bottom.
 
@@ -37,4 +37,4 @@ One exception: a small external-link icon (16px, 1.5px stroke, same color as the
 1. Install the Tokens Studio for Figma plugin. Load `assets/Figma/tokens-studio.json` (Settings, Add new, JSON). Create styles for colors and text, and variables for spacing and radius.
 2. Install the fonts Familjen Grotesk (500, 600, 700) and Figtree (300, 400, 500, 600) from Google Fonts.
 3. Build the page at 1280px wide with the layout in the "Figma build guide" section: auto layout everywhere, container 1152px, bands as full-width frames.
-4. Components to create first: Button (primary, outline, accent, outline-inverse), Pill (chip, date, fact, availability), Section arrow, Section header, Step, Quote band, Service card, Work card, Job row, Quote card. Each has a live preview and a spec in this system.
+4. Components to create first: Button (primary, outline, accent, outline-inverse), Pill (chip, date, fact, availability), Section arrow, Section header, Menu button, Step, Quote band, Service card, Work card, Job row, Quote card. Each has a live preview and a spec in this system.

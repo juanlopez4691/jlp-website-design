@@ -79,14 +79,14 @@
         "$description": "Gap between hero columns; column gaps in lists."
       },
       "space-16": {
-        "$value": "72",
+        "$value": "64",
         "$type": "spacing",
-        "$description": "Hero bottom padding."
+        "$description": "Band vertical padding on phones (Tailwind py-16)."
       },
       "space-20": {
         "$value": "80",
         "$type": "spacing",
-        "$description": "Band vertical padding on desktop (56px on phones)."
+        "$description": "Band vertical padding on desktop (64px on phones, space-16)."
       },
       "space-2-5": {
         "$value": "10",
@@ -96,7 +96,7 @@
     },
     "radius": {
       "radius-sm": {
-        "$value": "6",
+        "$value": "8",
         "$type": "borderRadius",
         "$description": "Work cards."
       },
@@ -165,7 +165,7 @@
         "h1": {
           "$value": "96",
           "$type": "fontSizes",
-          "$description": "Hero title. Tailwind text-8xl (96px), leading 0.95, tracking -2.4px. Fluid down to 48px on phones."
+          "$description": "Hero title. Tailwind text-8xl (96px), leading 0.95, tracking -2.4px. 48px on phones (see Display mobile in tokens.json)."
         },
         "h2": {
           "$value": "60",

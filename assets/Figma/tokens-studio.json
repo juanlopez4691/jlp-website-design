@@ -450,6 +450,90 @@
       "letterSpacing": "0"
      }
     }
+   },
+   "display-mobile": {
+    "h1": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Familjen Grotesk",
+      "fontWeight": "700",
+      "fontSize": "48",
+      "lineHeight": "48",
+      "letterSpacing": "-1.2"
+     }
+    },
+    "h2": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Familjen Grotesk",
+      "fontWeight": "700",
+      "fontSize": "36",
+      "lineHeight": "36",
+      "letterSpacing": "-0.9"
+     }
+    },
+    "mail": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Figtree",
+      "fontWeight": "400",
+      "fontSize": "30",
+      "lineHeight": "30",
+      "letterSpacing": "-0.75"
+     }
+    },
+    "quote-big": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Figtree",
+      "fontWeight": "300",
+      "fontSize": "24",
+      "lineHeight": "33",
+      "letterSpacing": "-0.6"
+     }
+    }
+   },
+   "display-tablet": {
+    "h1": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Familjen Grotesk",
+      "fontWeight": "700",
+      "fontSize": "60",
+      "lineHeight": "60",
+      "letterSpacing": "-1.5"
+     }
+    },
+    "h2": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Familjen Grotesk",
+      "fontWeight": "700",
+      "fontSize": "48",
+      "lineHeight": "48",
+      "letterSpacing": "-1.2"
+     }
+    },
+    "mail": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Figtree",
+      "fontWeight": "400",
+      "fontSize": "48",
+      "lineHeight": "48",
+      "letterSpacing": "-1.2"
+     }
+    },
+    "quote-big": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Figtree",
+      "fontWeight": "300",
+      "fontSize": "30",
+      "lineHeight": "41.25",
+      "letterSpacing": "-0.75"
+     }
+    }
    }
   },
   "spacing": {
@@ -490,7 +574,7 @@
     "type": "spacing"
    },
    "space-16": {
-    "value": "72",
+    "value": "64",
     "type": "spacing"
    },
    "space-20": {
@@ -500,7 +584,7 @@
   },
   "borderRadius": {
    "radius-sm": {
-    "value": "6",
+    "value": "8",
     "type": "borderRadius"
    },
    "radius-lg": {
