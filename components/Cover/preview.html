@@ -1,0 +1,26 @@
+<!-- @dsCard height=288 -->
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0}body{background:var(--mint)}
+svg{display:block;width:960px;height:288px}
+.ground{fill:var(--mint)}.saf{fill:var(--saffron)}.cor{fill:var(--coral)}.tea{fill:var(--teal)}.nav{fill:var(--navy)}.pill{fill:var(--mint)}
+.name{font-family:var(--font-display);font-weight:700;font-size:64px;letter-spacing:-1.9px;fill:var(--navy)}
+.tag{font-family:var(--font-sans);font-size:14px;fill:var(--navy)}
+</style></head><body>
+<svg viewBox="0 0 960 288" xmlns="http://www.w3.org/2000/svg">
+<!-- blocks: saffron 200x144, coral 232x96, teal 232x128 (service-card sizes), navy 200x80, all on space-8 steps.
+ arrangement: staggered stack right of x=480, two columns of unequal blocks.
+ pattern: pills (radius-pill, half the short side), because the system's every label and button is a pill; 3 rows of 4 cut out of the teal block.
+ radii: the top-right corner of each block uses radius-tab (64px), like the service cards. -->
+<rect class="ground" width="960" height="288"/>
+<path class="saf" d="M496 24H632A64 64 0 0 1 696 88V168H496Z"/>
+<path class="cor" d="M712 24H880A64 64 0 0 1 944 88V120H712Z"/>
+<path class="tea" d="M712 136H880A64 64 0 0 1 944 200V264H712Z"/>
+<path class="nav" d="M496 184H632A64 64 0 0 1 696 248V264H496Z"/>
+<g class="pill">
+<rect x="736" y="164" width="40" height="16" rx="8"/><rect x="784" y="164" width="40" height="16" rx="8"/><rect x="832" y="164" width="40" height="16" rx="8"/><rect x="880" y="164" width="40" height="16" rx="8"/>
+<rect x="736" y="192" width="40" height="16" rx="8"/><rect x="784" y="192" width="40" height="16" rx="8"/><rect x="832" y="192" width="40" height="16" rx="8"/><rect x="880" y="192" width="40" height="16" rx="8"/>
+<rect x="736" y="220" width="40" height="16" rx="8"/><rect x="784" y="220" width="40" height="16" rx="8"/><rect x="832" y="220" width="40" height="16" rx="8"/><rect x="880" y="220" width="40" height="16" rx="8"/>
+</g>
+<text class="name" x="40" y="220">lojopez.dev</text>
+<text class="tag" x="42" y="248">Color blocks, pills and one woodcut.</text>
+</svg></body></html>

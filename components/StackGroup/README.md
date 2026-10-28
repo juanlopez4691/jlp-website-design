@@ -1,0 +1,1 @@
+Group of tools on the navy band. Label in uppercase saffron, then chips with a 1.5px mint outline. Core groups (CMS, Backend) invert: saffron fill, navy text, weight 600. Groups sit in auto-fit columns of 320px with a 36px by 40px gap.

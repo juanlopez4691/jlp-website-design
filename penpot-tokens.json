@@ -1,0 +1,507 @@
+{
+  "Core": {
+    "color": {
+      "saffron": {
+        "$value": "#f5b82e",
+        "$type": "color",
+        "$description": "Primary accent. Hero band, service card 1, tags, dates, core-stack chips, availability dot, buttons on dark bands. Text on it is navy."
+      },
+      "coral": {
+        "$value": "#ff7f5c",
+        "$type": "color",
+        "$description": "Secondary accent. How I work band, service card 2, project tag 2. Text on it is navy."
+      },
+      "teal": {
+        "$value": "#0d4a47",
+        "$type": "color",
+        "$description": "Deep band. Selected work and Contact bands, service card 3. Text on it is mint."
+      },
+      "mint": {
+        "$value": "#eef5f1",
+        "$type": "color",
+        "$description": "Page ground and light text. Default background, cards on dark bands, text on teal and navy."
+      },
+      "navy": {
+        "$value": "#14213d",
+        "$type": "color",
+        "$description": "Ink. All body text on light bands, outlines, primary buttons, Stack and footer bands."
+      },
+      "white": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "Recommendation cards only."
+      }
+    },
+    "spacing": {
+      "space-1": {
+        "$value": "4",
+        "$type": "spacing",
+        "$description": "Tight gaps inside chips."
+      },
+      "space-2": {
+        "$value": "8",
+        "$type": "spacing",
+        "$description": "Gap between chips and buttons."
+      },
+      "space-3": {
+        "$value": "12",
+        "$type": "spacing",
+        "$description": "Gap between fact pills and button rows."
+      },
+      "space-4": {
+        "$value": "16",
+        "$type": "spacing",
+        "$description": "Base gutter on phones; paragraph gaps."
+      },
+      "space-5": {
+        "$value": "20",
+        "$type": "spacing",
+        "$description": "Gap between cards in a grid."
+      },
+      "space-6": {
+        "$value": "24",
+        "$type": "spacing",
+        "$description": "Card padding (26px in work cards)."
+      },
+      "space-8": {
+        "$value": "32",
+        "$type": "spacing",
+        "$description": "Service card padding; heading to content."
+      },
+      "space-10": {
+        "$value": "40",
+        "$type": "spacing",
+        "$description": "Gap between hero columns (vertical)."
+      },
+      "space-12": {
+        "$value": "48",
+        "$type": "spacing",
+        "$description": "Gap between hero columns; column gaps in lists."
+      },
+      "space-16": {
+        "$value": "72",
+        "$type": "spacing",
+        "$description": "Hero bottom padding."
+      },
+      "space-20": {
+        "$value": "80",
+        "$type": "spacing",
+        "$description": "Band vertical padding on desktop (56px on phones)."
+      },
+      "space-2-5": {
+        "$value": "10",
+        "$type": "spacing",
+        "$description": "Left padding of the availability pill (Tailwind spacing 2.5)."
+      }
+    },
+    "radius": {
+      "radius-sm": {
+        "$value": "6",
+        "$type": "borderRadius",
+        "$description": "Work cards."
+      },
+      "radius-lg": {
+        "$value": "28",
+        "$type": "borderRadius",
+        "$description": "Featured recommendation."
+      },
+      "radius-tab": {
+        "$value": "48",
+        "$type": "borderRadius",
+        "$description": "Service cards: top right and bottom left only."
+      },
+      "radius-pill": {
+        "$value": "999",
+        "$type": "borderRadius",
+        "$description": "Buttons, tags, chips, fact and date pills, availability pill."
+      },
+      "radius-button": {
+        "$value": "0",
+        "$type": "borderRadius",
+        "$description": "Buttons. Square corners."
+      }
+    },
+    "font": {
+      "family": {
+        "display": {
+          "$value": "Familjen Grotesk",
+          "$type": "fontFamilies",
+          "$description": ""
+        },
+        "sans": {
+          "$value": "Figtree",
+          "$type": "fontFamilies",
+          "$description": ""
+        }
+      },
+      "weight": {
+        "light": {
+          "$value": "300",
+          "$type": "fontWeights",
+          "$description": "Featured quote."
+        },
+        "regular": {
+          "$value": "400",
+          "$type": "fontWeights",
+          "$description": ""
+        },
+        "medium": {
+          "$value": "500",
+          "$type": "fontWeights",
+          "$description": ""
+        },
+        "semibold": {
+          "$value": "600",
+          "$type": "fontWeights",
+          "$description": ""
+        },
+        "bold": {
+          "$value": "700",
+          "$type": "fontWeights",
+          "$description": ""
+        }
+      },
+      "size": {
+        "h1": {
+          "$value": "96",
+          "$type": "fontSizes",
+          "$description": "Hero title. Tailwind text-8xl (96px), leading 0.95, tracking -2.4px. Fluid down to 48px on phones."
+        },
+        "h2": {
+          "$value": "60",
+          "$type": "fontSizes",
+          "$description": "Section title. Tailwind text-6xl (60px), leading none, tracking -1.5px. Max 18ch."
+        },
+        "mail": {
+          "$value": "72",
+          "$type": "fontSizes",
+          "$description": "Contact address in saffron. Figtree 400, not the display face. Tailwind text-7xl (72px), leading none."
+        },
+        "quote-big": {
+          "$value": "36",
+          "$type": "fontSizes",
+          "$description": "Featured recommendation. Figtree 300 (Light). Tailwind text-4xl (36px), leading tight."
+        },
+        "sub": {
+          "$value": "30",
+          "$type": "fontSizes",
+          "$description": "Sub-heading inside a band (More work). Tailwind text-3xl (30px)."
+        },
+        "role": {
+          "$value": "24",
+          "$type": "fontSizes",
+          "$description": "Role line under the hero title. Tailwind text-2xl (24px), weight 500. Max 26ch."
+        },
+        "h3-service": {
+          "$value": "24",
+          "$type": "fontSizes",
+          "$description": "Service card title. Tailwind text-2xl (24px)."
+        },
+        "h3-card": {
+          "$value": "24",
+          "$type": "fontSizes",
+          "$description": "Work card title. Tailwind text-2xl (24px)."
+        },
+        "h3-job": {
+          "$value": "24",
+          "$type": "fontSizes",
+          "$description": "Experience role title. Tailwind text-2xl (24px)."
+        },
+        "brand": {
+          "$value": "20",
+          "$type": "fontSizes",
+          "$description": "Name in the header. Tailwind text-xl (20px)."
+        },
+        "lead": {
+          "$value": "18",
+          "$type": "fontSizes",
+          "$description": "Hero paragraph. Tailwind text-lg (18px), leading relaxed. Max 36ch."
+        },
+        "body": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Default text."
+        },
+        "body-sm": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Card text. Tailwind text-base (16px), leading normal."
+        },
+        "result": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Result line at the end of a work card. Tailwind text-base, weight 600."
+        },
+        "nav": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Header links. Tailwind text-base, weight 600."
+        },
+        "chip": {
+          "$value": "12",
+          "$type": "fontSizes",
+          "$description": "Technology chip in a work card. Tailwind text-xs (12px)."
+        },
+        "chip-lg": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Chip in the Stack band. Tailwind text-base (16px). 600 for core groups."
+        },
+        "button": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Button label. Sentence case."
+        },
+        "eyebrow": {
+          "$value": "14",
+          "$type": "fontSizes",
+          "$description": "Section label. Tailwind text-sm (14px). Uppercase."
+        },
+        "tag": {
+          "$value": "12",
+          "$type": "fontSizes",
+          "$description": "Client tag on a work card. Tailwind text-xs (12px). Uppercase."
+        },
+        "fact-label": {
+          "$value": "12",
+          "$type": "fontSizes",
+          "$description": "Label inside a fact pill. Tailwind text-xs (12px). Uppercase."
+        },
+        "date": {
+          "$value": "14",
+          "$type": "fontSizes",
+          "$description": "Date pill in Experience. Tailwind text-sm (14px)."
+        },
+        "text-sm": {
+          "$value": "14",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-base": {
+          "$value": "16",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-lg": {
+          "$value": "18",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-xl": {
+          "$value": "20",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-2xl": {
+          "$value": "24",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-3xl": {
+          "$value": "30",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-4xl": {
+          "$value": "36",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        },
+        "text-5xl": {
+          "$value": "48",
+          "$type": "fontSizes",
+          "$description": "Tailwind default size."
+        }
+      },
+      "tracking": {
+        "h1": {
+          "$value": "-2.4",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "h2": {
+          "$value": "-1.5",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "mail": {
+          "$value": "-1.8",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "quote-big": {
+          "$value": "-0.9",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "eyebrow": {
+          "$value": "1.84",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "tag": {
+          "$value": "1",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "fact-label": {
+          "$value": "0.75",
+          "$type": "letterSpacing",
+          "$description": ""
+        }
+      }
+    },
+    "border": {
+      "thin": {
+        "$value": "1.5",
+        "$type": "borderWidth",
+        "$description": "Chips, outlined work card."
+      },
+      "regular": {
+        "$value": "2",
+        "$type": "borderWidth",
+        "$description": "Outline buttons, fact pill, job row rule."
+      }
+    },
+    "size": {
+      "avatar": {
+        "$value": "50",
+        "$type": "sizing",
+        "$description": "Quote card photo."
+      },
+      "dot": {
+        "$value": "10",
+        "$type": "sizing",
+        "$description": "Availability dot."
+      },
+      "tick": {
+        "$value": "14",
+        "$type": "sizing",
+        "$description": "Marker tick."
+      },
+      "date-column": {
+        "$value": "176",
+        "$type": "sizing",
+        "$description": "Date column width in Experience rows (desktop)."
+      },
+      "arrow-width": {
+        "$value": "96",
+        "$type": "sizing",
+        "$description": "Section arrow width."
+      },
+      "arrow-height": {
+        "$value": "40",
+        "$type": "sizing",
+        "$description": "Section arrow height."
+      }
+    }
+  },
+  "Breakpoints": {
+    "screen": {
+      "sm": {
+        "$value": "640",
+        "$type": "dimension",
+        "$description": "Tailwind default breakpoint (min-width)."
+      },
+      "md": {
+        "$value": "768",
+        "$type": "dimension",
+        "$description": "Tailwind default breakpoint (min-width)."
+      },
+      "lg": {
+        "$value": "1024",
+        "$type": "dimension",
+        "$description": "Tailwind default breakpoint (min-width)."
+      },
+      "xl": {
+        "$value": "1280",
+        "$type": "dimension",
+        "$description": "Tailwind default breakpoint (min-width)."
+      },
+      "2xl": {
+        "$value": "1536",
+        "$type": "dimension",
+        "$description": "Tailwind default breakpoint (min-width)."
+      },
+      "base": {
+        "$value": "390",
+        "$type": "dimension",
+        "$description": "Phone frame width to design at (below sm)."
+      }
+    },
+    "container": {
+      "$value": "1152",
+      "$type": "dimension",
+      "$description": "Content max width."
+    }
+  },
+  "Semantic": {
+    "surface": {
+      "ground": {
+        "$value": "{color.mint}",
+        "$type": "color",
+        "$description": "Page background."
+      },
+      "ink": {
+        "$value": "{color.navy}",
+        "$type": "color",
+        "$description": "Default text."
+      },
+      "hero": {
+        "$value": "{color.saffron}",
+        "$type": "color",
+        "$description": ""
+      },
+      "work": {
+        "$value": "{color.teal}",
+        "$type": "color",
+        "$description": ""
+      },
+      "how": {
+        "$value": "{color.coral}",
+        "$type": "color",
+        "$description": ""
+      },
+      "stack": {
+        "$value": "{color.navy}",
+        "$type": "color",
+        "$description": ""
+      },
+      "card": {
+        "$value": "{color.white}",
+        "$type": "color",
+        "$description": "Recommendation cards."
+      },
+      "quote": {
+        "$value": "{color.coral}",
+        "$type": "color",
+        "$description": "Quote band."
+      }
+    },
+    "text": {
+      "on-light": {
+        "$value": "{color.navy}",
+        "$type": "color",
+        "$description": ""
+      },
+      "on-dark": {
+        "$value": "{color.mint}",
+        "$type": "color",
+        "$description": ""
+      },
+      "accent-on-dark": {
+        "$value": "{color.saffron}",
+        "$type": "color",
+        "$description": ""
+      }
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "Core",
+      "Breakpoints",
+      "Semantic"
+    ]
+  }
+}
