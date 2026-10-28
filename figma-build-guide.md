@@ -64,7 +64,7 @@ Same bands in the same order, one column, built on `Home / base 390`. Side paddi
 Same bands in the same order, built on `Home / md 768` (open menu: `Menu / md 768 (open)`). Side padding 32 (container 704), band padding 80, same `surface.*` fills, arrow centred. Display styles use `Display tablet` (tokens `font.size.*-md` and `font.tracking.*-md`: h1 60, h2 48, mail 48, quote-big 30); everything else keeps its desktop size.
 
 - **Header:** same as phone: "EN / ES" left, `menu-button` right; the seven links only appear from `lg` (1024px).
-- **Hero:** no woodcut (as on phone). One text column 560 wide, buttons side by side (gap 16).
+- **Hero:** no woodcut (as on phone). One text column 560 wide, centred in the container, with 24 between the text block and the buttons, which sit side by side (gap 16).
 - **Facts:** Core stack on its own row, then four columns of 158 (gap 24).
 - **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards. No author photo on tablet.
 - **Quote band:** mark and text side by side, text 30 light.
