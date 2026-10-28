@@ -47,7 +47,7 @@ Eyebrow, then "Let's talk about what you're building." and the address in `mail`
 One row, space-between, padding 24 top and bottom, three parts: Download my CV and GitHub on the left, Legal notice, Privacy and Cookies in the middle, the copyright on the right. Items in a group are separated by a bullet (`•`) with 12px on each side.
 
 ## Phone (390px, `base`)
-Same bands in the same order, one column, built on `Home / base 390`. Side padding 32 (container 326), band vertical padding 64 (`space-16`), same `surface.*` fills, arrow centred (96 x 40 stays). Only the Display styles shrink (see "Display mobile" in `tokens.json`): h1 48, h2 36, mail 30, quote-big 24; every other style keeps its desktop size.
+Same bands in the same order, one column, built on `Home / base 390`. Side padding 32 (container 326), band vertical padding 64 (`space-16`), same `surface.*` fills, arrow centred (96 x 40 stays). Only the Display styles shrink (see "Display mobile" in `tokens.json`; tokens `font.size.*-base` and `font.tracking.*-base`): h1 48, h2 36, mail 30, quote-big 24; every other style keeps its desktop size.
 
 - **Header:** "EN / ES" (`nav`) on the left, `menu-button` on the right, no nav links and no brand name (the name is in the hero title). The open menu is a second frame (`Menu / base 390 (open)`): saffron panel, same header with `menu-button-close` on the right, then the seven links in `h3-service` (24 gap).
 - **Hero:** no woodcut. Pill (text wraps), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
@@ -61,7 +61,7 @@ Same bands in the same order, one column, built on `Home / base 390`. Side paddi
 - **Footer:** three rows: copyright, then Download my CV and GitHub, then Legal notice, Privacy and Cookies; each row wraps if needed.
 
 ## Tablet (768px, `md`)
-Same bands in the same order, built on `Home / md 768` (open menu: `Menu / md 768 (open)`). Side padding 32 (container 704), band padding 80, same `surface.*` fills, arrow centred. Display styles use `Display tablet` (h1 60, h2 48, mail 48, quote-big 30); everything else keeps its desktop size.
+Same bands in the same order, built on `Home / md 768` (open menu: `Menu / md 768 (open)`). Side padding 32 (container 704), band padding 80, same `surface.*` fills, arrow centred. Display styles use `Display tablet` (tokens `font.size.*-md` and `font.tracking.*-md`: h1 60, h2 48, mail 48, quote-big 30); everything else keeps its desktop size.
 
 - **Header:** same as phone: "EN / ES" left, `menu-button` right; the seven links only appear from `lg` (1024px).
 - **Hero:** no woodcut (as on phone). One text column 560 wide, buttons side by side (gap 16).

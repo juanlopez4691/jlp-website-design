@@ -311,6 +311,46 @@
           "$value": "48",
           "$type": "fontSizes",
           "$description": "Tailwind default size."
+        },
+        "h1-md": {
+          "$value": "60",
+          "$type": "fontSizes",
+          "$description": "Hero title on tablet (md, 768px). Tailwind text-6xl."
+        },
+        "h1-base": {
+          "$value": "48",
+          "$type": "fontSizes",
+          "$description": "Hero title on phone (below md). Tailwind text-5xl."
+        },
+        "h2-md": {
+          "$value": "48",
+          "$type": "fontSizes",
+          "$description": "Section title on tablet (md, 768px). Tailwind text-5xl."
+        },
+        "h2-base": {
+          "$value": "36",
+          "$type": "fontSizes",
+          "$description": "Section title on phone (below md). Tailwind text-4xl."
+        },
+        "mail-md": {
+          "$value": "48",
+          "$type": "fontSizes",
+          "$description": "Contact address on tablet (md, 768px). Tailwind text-5xl."
+        },
+        "mail-base": {
+          "$value": "30",
+          "$type": "fontSizes",
+          "$description": "Contact address on phone (below md). Tailwind text-3xl."
+        },
+        "quote-big-md": {
+          "$value": "30",
+          "$type": "fontSizes",
+          "$description": "Featured quote on tablet (md, 768px). Tailwind text-3xl."
+        },
+        "quote-big-base": {
+          "$value": "24",
+          "$type": "fontSizes",
+          "$description": "Featured quote on phone (below md). Tailwind text-2xl."
         }
       },
       "tracking": {
@@ -346,6 +386,46 @@
         },
         "fact-label": {
           "$value": "0.75",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "h1-md": {
+          "$value": "-1.5",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "h1-base": {
+          "$value": "-1.2",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "h2-md": {
+          "$value": "-1.2",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "h2-base": {
+          "$value": "-0.9",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "mail-md": {
+          "$value": "-1.2",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "mail-base": {
+          "$value": "-0.75",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "quote-big-md": {
+          "$value": "-0.75",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "quote-big-base": {
+          "$value": "-0.6",
           "$type": "letterSpacing",
           "$description": ""
         }
