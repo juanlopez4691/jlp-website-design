@@ -50,7 +50,7 @@ One row, space-between, padding 24 top and bottom, three parts: Download my CV a
 Same bands in the same order, one column, built on `Home / base 390`. Side padding 32 (container 326), band vertical padding 64 (`space-16`), same `surface.*` fills, arrow centred (96 x 40 stays). Only the Display styles shrink (see "Display mobile" in `tokens.json`; tokens `font.size.*-base` and `font.tracking.*-base`): h1 48, h2 36, mail 30, quote-big 24; every other style keeps its desktop size.
 
 - **Header:** "EN / ES" (`nav`) on the left, `menu-button` on the right, no nav links and no brand name (the name is in the hero title). The open menu is a second frame (`Menu / base 390 (open)`): saffron panel, same header with `menu-button-close` on the right, then the seven links in `h3-service` (24 gap).
-- **Hero:** no woodcut. Pill (text wraps), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
+- **Hero:** no woodcut. Availability pill on one line with shorter copy, "Open to freelance and full-time work" (the full text wraps on 390; keep it as a separate short string for i18n), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
 - **Facts:** Core stack on its own row, then two columns of 151 (Experience and Clients, Based in and Languages), gap 24.
 - **Cards:** services, work, "More work" and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards; cards grow to fit their text. Chips wrap.
 - **Quote band:** the quote mark (96) above the text, everything left-aligned; author and role on separate lines (no leading dot).
