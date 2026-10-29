@@ -10,4 +10,4 @@ In Penpot it is a single variant set with two properties: `Kind` (the role) and 
 | fact | on-light, on-dark | `on-light`: 2px navy outline on light blocks. `on-dark`: same shape with a mint outline and mint text, label in saffron, for pills on dark blocks. The hero facts stripe no longer uses pills. Label in `tag` plus value in `pill`. |
 | availability | on-light | Navy fill, mint text in `label`, 10px saffron dot. |
 
-All pill and tag text is 14px. Padding: tags and chips are compact (`space-1` vertical, `space-3` horizontal). Date, fact and availability share a taller size (`space-2` vertical, `space-4` horizontal; the availability pill uses a 10px left padding so the round dot looks aligned).
+All pill and tag text is 14px (`pill` has line height 1.2 so chips stay compact). Padding: tags and chips are compact (`space-1` vertical, `space-3` horizontal). Date, fact and availability share a taller size (`space-2` vertical, `space-4` horizontal; the availability pill uses a 10px left padding so the round dot looks aligned).
