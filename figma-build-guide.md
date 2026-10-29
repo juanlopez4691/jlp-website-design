@@ -25,7 +25,7 @@ Full-width navy band (`surface.stack`), padding 32 top and bottom, same containe
 Eyebrow "What I do", `h2` "Where I can help", then six service cards in two rows of three, gap 24 (3 columns of 368). Card: padding 32, height 182 (fits three lines of text), vertical gap 16, `radius-tab` (48) on the top-right and bottom-left corners only. Titles are one line each (`h3-service`): WordPress, Laravel and Statamic, Migrations, Performance, APIs and integrations, Maintenance and support. Fills in a diagonal rotation so equal colours never touch: saffron, coral, teal / teal, saffron, coral. Text navy; mint on teal.
 
 ## Quote (coral band)
-One quote taken from a recommendation: `quote-big` (36, weight 300), navy, max 896px wide, with a large quotation mark (SVG icon `assets/icons/quote-mark.svg`, 48.8 x 35.6, mint, drawn from Playfair Display SC Bold so the font is not loaded) to its left and the author underneath (name 18 regular, role 16, 16px gap). The block is centred in the container. Padding 80 top and bottom.
+One quote taken from a recommendation: `quote-big` (36, weight 300), navy, max 896px wide, with two large decorative quotation marks behind it (SVG icon `assets/icons/quote-mark.svg`, 288 wide, mint at 30% opacity: opening at the top left, the same mark rotated 180 degrees at the bottom right, cropped by the band edge) and the author underneath (name 18 regular, role 16, 16px gap). The text block is centred in the container. Padding 80 top and bottom.
 
 ## Selected work (teal band)
 Eyebrow "Selected work", `h2` "Things I've built", then two columns of work cards, gap 24, three rows (heights 270, 294, 270; the row takes the tallest card). Card: mint fill, 8px radius, padding 24, gap 16. Contents in order: client name (`tag`, uppercase, plain text), `h3-card`, `body-sm`, `result` line, chips (pills). Chips stay at the bottom. Then `sub` "More work" and three outline cards (1.5px mint border, transparent, mint text), same padding.
@@ -55,7 +55,7 @@ Same bands in the same order, one column, built on `Home / base 390`. Side paddi
 - **Hero:** no woodcut. Availability pill on one line with shorter copy, "Open to freelance and full-time work" (the full text wraps on 390; keep it as a separate short string for i18n), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
 - **Facts:** Core stack on its own row, then two columns of 151 (Experience and Clients, Based in and Languages), gap 24.
 - **Cards:** services, work, "More work" and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards (no author photo); cards grow to fit their text. Chips wrap.
-- **Quote band:** the quote mark (SVG, 36.6 x 26.7) above the text, everything left-aligned; author and role on separate lines (no leading dot).
+- **Quote band:** decorative marks 128 wide in the corners, text left-aligned; author and role on separate lines (no leading dot).
 - **How I work:** four steps stacked (gap 32), then the four principles stacked (gap 24).
 - **Experience:** the git log line stays on the left (32 wide); the date pill sits above the title and text. Each row is as tall as its content, so spine and tick follow it.
 - **Stack:** groups stacked, chips wrap.
@@ -69,7 +69,7 @@ Same bands in the same order, built on `Home / md 768` (open menu: `Menu / md 76
 - **Hero:** no woodcut (as on phone). One text column 560 wide, centred in the container, with 24 between the text block and the buttons, which sit side by side (gap 16).
 - **Facts:** Core stack on its own row, then four columns of 158 (gap 24).
 - **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards. No author photo on tablet.
-- **Quote band:** mark and text side by side, text 30 light.
+- **Quote band:** decorative marks 192 wide in the corners, text 30 light.
 - **How I work:** the four steps in a 2 x 2 grid (336 each, gap 32), the four principles in two columns.
 - **Experience:** git log as on desktop with the 176px date column, text column 432.
 - **Stack:** two columns of 340.
