@@ -2,6 +2,10 @@
 
 Color blocks: a bright, flat system for the portfolio of Joan López, a senior full stack developer. Full-width blocks in saffron, coral, teal and navy, pill-shaped labels, square buttons and one woodcut engraving of a blacksmith.
 
+## Implementation
+
+The site is built in Astro in a separate repository, [jlp-website](https://github.com/juanlopez4691/jlp-website). Its components use the names in this repository, and each spec here describes the matching component there.
+
 ## Content fundamentals
 
 - First person, direct. "Hi, I'm Joan López." "I take care of the technical side, from architecture to launch, so your project works on day one and stays fast, secure and easy to maintain."
