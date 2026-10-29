@@ -1,1 +1,0 @@
-Text link with the external-link icon, used for "Read them all on LinkedIn": label in `button` weight 600, navy, 8px gap and the 12px icon (1.5px stroke, text color). It sits at the bottom right of the recommendations grid. Penpot name `link-external`, variants `Breakpoint` xl, md, base.

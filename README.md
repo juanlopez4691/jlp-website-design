@@ -30,7 +30,7 @@ Color blocks: a bright, flat system for the portfolio of Joan López, a senior f
 
 ## Iconography
 
-One exception: a small external-link icon (16px, 1.5px stroke, same color as the text, 8px gap) after the author name in recommendation cards, to show that the name links to their LinkedIn profile. No other icons. The pill label does the job of an icon elsewhere.
+One exception: a small external-link icon, `icon-external-link` (12px, 1.5px stroke, same color as the text, 8px gap) after the author name in recommendation cards, to show that the name links to their LinkedIn profile. No other icons. The pill label does the job of an icon elsewhere.
 
 ## Using this in Figma
 
