@@ -1,4 +1,4 @@
-One component, `pill`, covers every small label. All kinds use `radius-pill`. Buttons are not pills: they are square, so the two never look alike.
+One component, `pill`, covers every small label. All kinds use `radius-full`. Buttons are not pills: they are square, so the two never look alike.
 
 In Penpot it is a single variant set with two properties, `Kind` and `Style`. The coloured tag variants were removed: the client name on a work card is plain uppercase text.
 

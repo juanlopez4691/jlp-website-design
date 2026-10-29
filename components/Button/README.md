@@ -1,4 +1,4 @@
-Square buttons (`radius-button`, 0) with a 2px border. Padding 13px 24px, `button` text style.
+Square buttons (`radius-none`, 0) with a 2px border. Padding 13px 24px, `button` text style.
 
 - **Primary**: `navy` fill, `mint` text. One per band.
 - **Outline**: transparent, navy border and text.

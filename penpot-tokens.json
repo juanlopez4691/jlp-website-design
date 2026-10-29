@@ -95,27 +95,27 @@
       }
     },
     "radius": {
-      "radius-sm": {
+      "radius-lg": {
         "$value": "8",
         "$type": "borderRadius",
         "$description": "Work cards."
       },
-      "radius-lg": {
+      "radius-28": {
         "$value": "28",
         "$type": "borderRadius",
         "$description": "Featured recommendation."
       },
-      "radius-tab": {
+      "radius-48": {
         "$value": "48",
         "$type": "borderRadius",
         "$description": "Service cards: top right and bottom left only."
       },
-      "radius-pill": {
+      "radius-full": {
         "$value": "999",
         "$type": "borderRadius",
         "$description": "Buttons, tags, chips, fact and date pills, availability pill."
       },
-      "radius-button": {
+      "radius-none": {
         "$value": "0",
         "$type": "borderRadius",
         "$description": "Buttons. Square corners."
