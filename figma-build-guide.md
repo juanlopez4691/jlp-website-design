@@ -16,7 +16,7 @@ A pointed arrow (96 x 40, concave quarter-ellipse sides) hangs from the top edge
 A separate full-width band, not part of the hero. Saffron fill (`surface.hero`), 32px padding top and bottom, nav vertically centred, same 1152px container. Seven nav links (`nav`, 32px gaps) on the left: Services, Work, Recommendations, Process, Experience, Stack, Contact. "EN / ES" on the right.
 
 ## Hero (saffron)
-Two columns, gap 32, aligned to the top. Left (about 463px wide, 16px gap): availability pill (navy fill, mint text, saffron dot 10px), `h1` "Hi, I'm Joan López" (96px, line height 0.95), `role` "Senior web developer." (24px, 500), a 24px bold tagline (`h3-service` style: "I forge reliable sites with WordPress, WooCommerce, Laravel and Statamic."), `lead` (18px) and two square buttons: "Tell me about your project" (primary navy) and "Download my CV" (outline navy). Right: the woodcut, 657x522, transparent PNG or WebP, navy ink, never cropped. Band padding: 0 top (the header band above already gives 32 below the nav), 80 bottom (64 on phones). Spacing in the text column (px, below each item): pill 12, `h1` 20, `role` 20, tagline 12, `lead` 16.
+Two columns, gap 32, aligned to the top. Left (about 463px wide, 16px gap): availability pill (navy fill, mint text, saffron dot 10px), `h1` "Hi, I'm Joan López" (96px, line height 0.95), `role` "Senior web developer." (24px, 500), a 24px bold tagline (`h3-service` style: "I forge reliable sites with WordPress, WooCommerce, Laravel and Statamic."), `lead` (18px) and two square buttons: "Tell me about your project" (primary navy) and "Download my CV" (outline navy). Right, desktop only: the woodcut, 657x522, transparent PNG or WebP, dark line, never cropped. Band padding: 0 top (the header band above already gives 32 below the nav), 80 bottom (64 on phones). Spacing in the text column (px, below each item): pill 12, `h1` 20, `role` 20, tagline 12, `lead` 16.
 
 ## Facts stripe (navy, below the hero)
 Full-width navy band (`surface.stack`), padding 32 top and bottom, same container. Five plain columns, each a `fact-label` label in saffron above a value in `lead` (mint). Tailwind: `grid grid-cols-12 gap-x-8 gap-y-6`, spans 3, 2, 2, 2, 3 (Core stack, Experience, Clients, Based in, Languages; ordered by relevance to a client).
@@ -43,7 +43,7 @@ Eyebrow "Experience", `h2` "25+ years building for the web". Rows drawn as a git
 Eyebrow "Tech stack" in saffron, `h2` "Tools I work with", auto-fit columns of 320px, gap 40 both ways. Group label: `fact-label` saffron. Chips: 1.5px mint outline, `chip-lg`. Core groups (CMS, Backend): saffron fill, navy text, weight 600.
 
 ## Contact (teal band)
-Eyebrow, then "Let's talk about what you're building." and the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background: low-contrast engraving, mint on transparent, behind the text.
+Eyebrow, then "Let's talk about what you're building." and the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background (desktop and tablet): low-contrast engraving, dark line on transparent, behind the text, anchored to the right edge of the band; hidden on phones.
 
 ## Footer (navy)
 One row, space-between, padding 24 top and bottom, three parts: Download my CV and GitHub on the left, Legal notice, Privacy and Cookies in the middle, the copyright on the right. Items in a group are separated by a bullet (`•`) with 12px on each side.
