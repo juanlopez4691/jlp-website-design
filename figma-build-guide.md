@@ -62,7 +62,7 @@ Same blocks in the same order, one column, built on `Home / base 390`. Side padd
 
 - **Header:** "EN / ES" (`nav`) on the left, `menu-button` on the right, no nav links and no brand name (the name is in the hero title). The open menu is a second frame (`Menu / base 390 (open)`): saffron panel, same header with `menu-button-close` on the right, then the seven links in `h3-service` (24 gap).
 - **Hero:** no woodcut. Availability pill on one line with shorter copy, "Open to freelance and full-time work" (the full text wraps on 390; keep it as a separate short string for i18n), h1, role, tagline, lead, then the two buttons stacked at full width (gap 16, label centred).
-- **Facts:** Core stack on its own row, then two columns of 151 (Experience and Clients, Based in and Languages), gap 24.
+- **Facts:** Core stack full width, then two columns of 151 (Experience and Clients, Based in and Languages), gap 24 both ways (flex row wrap). Items have auto height, never a fixed one.
 - **Cards:** services, work, "More work" and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards (no author photo); cards grow to fit their text. Chips wrap.
 - **Quote block:** decorative marks 128 wide in the corners, text left-aligned; author and role on separate lines (no leading dot).
 - **How I work:** four steps stacked (gap 32), then the four principles stacked (gap 24).
@@ -76,7 +76,7 @@ Same blocks in the same order, built on `Home / md 768` (open menu: `Menu / md 7
 
 - **Header:** same as phone: "EN / ES" left, `menu-button` right; the seven links only appear from `xl` (1280px).
 - **Hero:** no woodcut (as on phone). One text column 560 wide, centred in the container, with 24 between the text block and the buttons, which sit side by side (gap 16).
-- **Facts:** two columns of 340 (gap 24), in reading order: Core stack, Experience and Clients in the first column, Based in and Languages in the second. In Penpot the container is a wrapping column layout with a fixed height (243) so the items flow column first; in Tailwind use `grid grid-flow-col grid-rows-3`.
+- **Facts:** two columns of 340 (gap 24), in reading order: Core stack, Experience and Clients in the first column, Based in and Languages in the second. In Penpot the container is a row with two `column` boards (vertical flex, gap 24); in Tailwind `grid grid-cols-2 gap-6` with two `flex flex-col gap-6` stacks. Items have auto height, never a fixed one.
 - **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards. No author photo on tablet.
 - **Quote block:** decorative marks 192 wide in the corners, 40px from the side (same as desktop), text 30 light.
 - **How I work:** the four steps in a 2 x 2 grid (336 each, gap 32), the four principles in two columns.
