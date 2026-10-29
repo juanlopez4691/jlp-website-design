@@ -1,0 +1,1 @@
+Project card content for the "More work" cards on the teal block: same structure as `work-card` (head, body, chips; up to four chips) in mint text, with no result line. The box (transparent, 1.5px mint border, `radius-lg`, padding 24) belongs to `work-block`. Penpot name `work-card-outline`. In Astro: `WorkCardOutline`.
