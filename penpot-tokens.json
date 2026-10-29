@@ -220,12 +220,7 @@
         "body": {
           "$value": "16",
           "$type": "fontSizes",
-          "$description": "Default text."
-        },
-        "body-sm": {
-          "$value": "16",
-          "$type": "fontSizes",
-          "$description": "Card text. Tailwind text-base (16px), leading normal."
+          "$description": "Default text. Tailwind text-base (16px), leading relaxed."
         },
         "result": {
           "$value": "16",
@@ -235,17 +230,12 @@
         "nav": {
           "$value": "16",
           "$type": "fontSizes",
-          "$description": "Header links. Tailwind text-base, weight 600."
+          "$description": "Header links and the language switcher. Tailwind text-base, weight 600."
         },
-        "chip": {
-          "$value": "12",
+        "pill": {
+          "$value": "14",
           "$type": "fontSizes",
-          "$description": "Technology chip in a work card. Tailwind text-xs (12px)."
-        },
-        "chip-lg": {
-          "$value": "16",
-          "$type": "fontSizes",
-          "$description": "Chip in the Stack block. Tailwind text-base (16px). 600 for core groups."
+          "$description": "Text in a pill: chips and the fact value. Tailwind text-sm (14px)."
         },
         "button": {
           "$value": "16",
@@ -258,19 +248,14 @@
           "$description": "Section label. Tailwind text-sm (14px). Uppercase."
         },
         "tag": {
-          "$value": "12",
-          "$type": "fontSizes",
-          "$description": "Client tag on a work card. Tailwind text-xs (12px). Uppercase."
-        },
-        "fact-label": {
-          "$value": "12",
-          "$type": "fontSizes",
-          "$description": "Label inside a fact pill. Tailwind text-xs (12px). Uppercase."
-        },
-        "date": {
           "$value": "14",
           "$type": "fontSizes",
-          "$description": "Date pill in Experience. Tailwind text-sm (14px)."
+          "$description": "Uppercase tag: the client name on a work card and the label inside a fact pill. Tailwind text-sm (14px)."
+        },
+        "label": {
+          "$value": "14",
+          "$type": "fontSizes",
+          "$description": "Bold pill text: date and availability pills. Tailwind text-sm (14px)."
         },
         "text-sm": {
           "$value": "14",
@@ -381,11 +366,6 @@
         },
         "tag": {
           "$value": "1",
-          "$type": "letterSpacing",
-          "$description": ""
-        },
-        "fact-label": {
-          "$value": "0.75",
           "$type": "letterSpacing",
           "$description": ""
         },

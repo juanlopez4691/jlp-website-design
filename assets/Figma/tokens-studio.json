@@ -167,16 +167,6 @@
      "letterSpacing": "0"
     }
    },
-   "body-sm": {
-    "type": "typography",
-    "value": {
-     "fontFamily": "Figtree",
-     "fontWeight": "400",
-     "fontSize": "16",
-     "lineHeight": "24",
-     "letterSpacing": "0"
-    }
-   },
    "result": {
     "type": "typography",
     "value": {
@@ -197,23 +187,13 @@
      "letterSpacing": "0"
     }
    },
-   "chip": {
+   "pill": {
     "type": "typography",
     "value": {
      "fontFamily": "Figtree",
      "fontWeight": "500",
-     "fontSize": "12",
-     "lineHeight": "18",
-     "letterSpacing": "0"
-    }
-   },
-   "chip-lg": {
-    "type": "typography",
-    "value": {
-     "fontFamily": "Figtree",
-     "fontWeight": "500",
-     "fontSize": "16",
-     "lineHeight": "24",
+     "fontSize": "14",
+     "lineHeight": "21",
      "letterSpacing": "0"
     }
    },
@@ -242,22 +222,12 @@
     "value": {
      "fontFamily": "Figtree",
      "fontWeight": "600",
-     "fontSize": "12",
-     "lineHeight": "18",
+     "fontSize": "14",
+     "lineHeight": "21",
      "letterSpacing": "1"
     }
    },
-   "fact-label": {
-    "type": "typography",
-    "value": {
-     "fontFamily": "Figtree",
-     "fontWeight": "600",
-     "fontSize": "12",
-     "lineHeight": "18",
-     "letterSpacing": "0.75"
-    }
-   },
-   "date": {
+   "label": {
     "type": "typography",
     "value": {
      "fontFamily": "Figtree",

@@ -1,1 +1,1 @@
-One key fact in the facts stripe: a `fact-label` label in saffron above a value in `lead` (mint). Desktop: label above value in a column. Tablet: label above value, full row. Phone: same, 326 wide. Penpot name `fact`, variants `Breakpoint` xl, md, base.
+One key fact in the facts stripe: a `tag` label in saffron above a value in `lead` (mint). Desktop: label above value in a column. Tablet: label above value, full row. Phone: same, 326 wide. Penpot name `fact`, variants `Breakpoint` xl, md, base.
