@@ -76,7 +76,7 @@ Same blocks in the same order, built on `Home / md 768` (open menu: `Menu / md 7
 
 - **Header:** same as phone: "EN / ES" left, `menu-button` right; the seven links only appear from `xl` (1280px).
 - **Hero:** no woodcut (as on phone). One text column 560 wide, centred in the container, with 24 between the text block and the buttons, which sit side by side (gap 16).
-- **Facts:** Core stack on its own row, then four columns of 158 (gap 24).
+- **Facts:** two columns of 340 (gap 24), in reading order: Core stack, Experience and Clients in the first column, Based in and Languages in the second. In Penpot the container is a wrapping column layout with a fixed height (243) so the items flow column first; in Tailwind use `grid grid-flow-col grid-rows-3`.
 - **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high), work, "More work" (2 + 1) and recommendations. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards. No author photo on tablet.
 - **Quote block:** decorative marks 192 wide in the corners, text 30 light.
 - **How I work:** the four steps in a 2 x 2 grid (336 each, gap 32), the four principles in two columns.
