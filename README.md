@@ -37,4 +37,4 @@ One exception: a small external-link icon, `icon-external-link` (12px, 1.5px str
 1. Install the Tokens Studio for Figma plugin. Load `assets/Figma/tokens-studio.json` (Settings, Add new, JSON). Create styles for colors and text, and variables for spacing and radius.
 2. Install the fonts Familjen Grotesk (500, 600, 700) and Figtree (300, 400, 500, 600) from Google Fonts.
 3. Build the page at 1280px wide with the layout in the "Figma build guide" section: auto layout everywhere, container 1152px, blocks as full-width frames.
-4. Components to create first: Button (primary, outline, accent, outline-inverse), Pill (chip, date, fact, availability), Section arrow, Section header, Menu button, Step, Quote block, Service card, Work card, Job row, Quote. Each has a live preview and a spec in this system.
+4. Components to create first: Button (primary, secondary, accent, secondary-on-dark), Pill (chip, date, fact, availability), Section arrow, Section header, Menu button, Step, Quote block, Service card, Work card, Job row, Quote. Each has a live preview and a spec in this system.
