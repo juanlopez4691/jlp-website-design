@@ -2,4 +2,4 @@ Full-width coral block (`surface.quote`) that holds one short quote taken from a
 
 Content rules: the quote is a sentence or two from a real recommendation, in the person's own words, without ellipsis tricks. The author is always named. To reuse the block, change the quote, name and role, and override the arrow colour to the colour of the block above.
 
-In Penpot the main component `quote-block` lives on the Components page and contains an instance of `arrow`.
+In Penpot the component `quote-block` lives on the Components page, with a `Breakpoint` property (`xl`, `md`, `base`) because the marks, text size and padding change per breakpoint. Each variant contains an instance of `arrow`.
