@@ -1,0 +1,1 @@
+Saffron block with a `section-header`, the featured `quote-card` (navy) above a grid of four white `quote-card`s, and the `link-external` "Read them all on LinkedIn" at the bottom right. Grid: two columns on desktop and tablet, one on phones. The author photo shows on desktop only. Penpot name `recommendations-block`, variants `Breakpoint` xl, md, base.

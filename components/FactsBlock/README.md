@@ -1,0 +1,1 @@
+Navy stripe (`surface.stack`), padding 32, with five `fact` items. Desktop: one row, spans 3, 2, 2, 2, 3 of 12. Tablet: Core stack on its own row, then four columns. Phone: Core stack on its own row, then two columns. Penpot name `facts-block`, variants `Breakpoint` xl, md, base.

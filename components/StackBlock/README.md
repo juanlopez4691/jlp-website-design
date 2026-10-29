@@ -1,0 +1,1 @@
+Navy block with a `section-header` ("Tech stack", "Tools I work with") and the tech stack groups (plain `stack / <name>` boards, see `StackGroup`). Desktop: auto-fit columns of 320, gap 40. Tablet: two columns of 340. Phone: stacked, chips wrap. Penpot name `stack-block`, variants `Breakpoint` xl, md, base.

@@ -4,27 +4,27 @@
       "saffron": {
         "$value": "#f5b82e",
         "$type": "color",
-        "$description": "Primary accent. Hero band, service card 1, tags, dates, core-stack chips, availability dot, buttons on dark bands. Text on it is navy."
+        "$description": "Primary accent. Hero block, service card 1, tags, dates, core-stack chips, availability dot, buttons on dark blocks. Text on it is navy."
       },
       "coral": {
         "$value": "#ff7f5c",
         "$type": "color",
-        "$description": "Secondary accent. How I work band, service card 2, project tag 2. Text on it is navy."
+        "$description": "Secondary accent. How I work block, service card 2, project tag 2. Text on it is navy."
       },
       "teal": {
         "$value": "#0d4a47",
         "$type": "color",
-        "$description": "Deep band. Selected work and Contact bands, service card 3. Text on it is mint."
+        "$description": "Deep block. Selected work and Contact blocks, service card 3. Text on it is mint."
       },
       "mint": {
         "$value": "#eef5f1",
         "$type": "color",
-        "$description": "Page ground and light text. Default background, cards on dark bands, text on teal and navy."
+        "$description": "Page ground and light text. Default background, cards on dark blocks, text on teal and navy."
       },
       "navy": {
         "$value": "#14213d",
         "$type": "color",
-        "$description": "Ink. All body text on light bands, outlines, primary buttons, Stack and footer bands."
+        "$description": "Ink. All body text on light blocks, outlines, primary buttons, Stack and footer blocks."
       },
       "white": {
         "$value": "#ffffff",
@@ -81,12 +81,12 @@
       "space-16": {
         "$value": "64",
         "$type": "spacing",
-        "$description": "Band vertical padding on phones (Tailwind py-16)."
+        "$description": "Block vertical padding on phones (Tailwind py-16)."
       },
       "space-20": {
         "$value": "80",
         "$type": "spacing",
-        "$description": "Band vertical padding on desktop (64px on phones, space-16)."
+        "$description": "Block vertical padding on desktop (64px on phones, space-16)."
       },
       "space-2-5": {
         "$value": "10",
@@ -185,7 +185,7 @@
         "sub": {
           "$value": "30",
           "$type": "fontSizes",
-          "$description": "Sub-heading inside a band (More work). Tailwind text-3xl (30px)."
+          "$description": "Sub-heading inside a block (More work). Tailwind text-3xl (30px)."
         },
         "role": {
           "$value": "24",
@@ -245,7 +245,7 @@
         "chip-lg": {
           "$value": "16",
           "$type": "fontSizes",
-          "$description": "Chip in the Stack band. Tailwind text-base (16px). 600 for core groups."
+          "$description": "Chip in the Stack block. Tailwind text-base (16px). 600 for core groups."
         },
         "button": {
           "$value": "16",
@@ -555,7 +555,7 @@
       "quote": {
         "$value": "{color.coral}",
         "$type": "color",
-        "$description": "Quote band."
+        "$description": "Quote block."
       }
     },
     "text": {

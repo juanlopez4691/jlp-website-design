@@ -1,0 +1,1 @@
+Mint block with a `section-header` and a list of `job-row`s drawn as a git log. Desktop and tablet keep the 176px date column; on phones the spine stays on the left and the date pill sits above the title. Penpot name `experience-block`, variants `Breakpoint` xl, md, base.

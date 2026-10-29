@@ -1,0 +1,1 @@
+Coral block with a `section-header` ("Process", "How I work"), four `step`s and four `principle`s. Desktop: steps in one row, principles in two columns. Tablet: steps in a 2 x 2 grid, principles in two columns. Phone: everything stacked. Penpot name `how-block`, variants `Breakpoint` xl, md, base.

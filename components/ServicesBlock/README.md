@@ -1,0 +1,1 @@
+Mint block with a `section-header` ("What I do", "Where I can help") and six `service-card`s. Desktop: three columns of 368, gap 24. Tablet: two columns of 340. Phone: one column. Penpot name `services-block`, variants `Breakpoint` xl, md, base.

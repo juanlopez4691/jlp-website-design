@@ -4,27 +4,27 @@
    "saffron": {
     "value": "#f5b82e",
     "type": "color",
-    "description": "Primary accent. Hero and Recommendations bands, service cards, availability dot, core-stack chips, labels and the contact address on dark bands, buttons on dark bands. Text on it is navy."
+    "description": "Primary accent. Hero and Recommendations blocks, service cards, availability dot, core-stack chips, labels and the contact address on dark blocks, buttons on dark blocks. Text on it is navy."
    },
    "coral": {
     "value": "#ff7f5c",
     "type": "color",
-    "description": "Secondary accent. Quote and How I work bands, service cards. Text on it is navy."
+    "description": "Secondary accent. Quote and How I work blocks, service cards. Text on it is navy."
    },
    "teal": {
     "value": "#0d4a47",
     "type": "color",
-    "description": "Deep band. Selected work and Contact bands, service cards. Text on it is mint."
+    "description": "Deep block. Selected work and Contact blocks, service cards. Text on it is mint."
    },
    "mint": {
     "value": "#eef5f1",
     "type": "color",
-    "description": "Page ground and light text. Default background, cards on dark bands, text on teal and navy."
+    "description": "Page ground and light text. Default background, cards on dark blocks, text on teal and navy."
    },
    "navy": {
     "value": "#14213d",
     "type": "color",
-    "description": "Ink. All body text on light bands, outlines, primary buttons, Facts, Stack and footer bands."
+    "description": "Ink. All body text on light blocks, outlines, primary buttons, Facts, Stack and footer blocks."
    },
    "white": {
     "value": "#ffffff",

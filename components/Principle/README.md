@@ -1,0 +1,1 @@
+One principle in the "How I work" block: a title in `h3-service` and a paragraph in `body-sm`, no rule. Title and text wrap to the width of the column. Penpot name `principle`, variants `Breakpoint` xl, md, base.

@@ -1,0 +1,1 @@
+Teal block (`surface.work`) with a `section-header`, six `work-card`s, the "More work" label and three outline `work-card`s. Two columns on desktop and tablet (gap 24), one on phones. Cards in a row share the height of the tallest. Penpot name `work-block`, variants `Breakpoint` xl, md, base.
