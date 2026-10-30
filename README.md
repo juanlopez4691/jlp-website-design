@@ -8,7 +8,7 @@ The site is built in Astro in a separate repository, [jlp-website](https://githu
 
 ## Content fundamentals
 
-- First person, direct. "Hi, I'm Joan López." "I take care of the technical side, from architecture to launch, so your project works on day one and stays fast, secure and easy to maintain."
+- First person, direct. "Hello, I'm Joan López." "I take care of the technical side, from architecture to launch, so your project works on day one and stays fast, secure and easy to maintain."
 - Short sentences with concrete nouns: Statamic, WooCommerce, Laravel, TicketBAI. No sales language, no superlatives.
 - No em dashes or en dashes. Dates read "Jan 2021 to Present".
 - Sentence case for titles and buttons: "Get in touch", "Email me". Uppercase only for eyebrows, client tags and fact labels.
