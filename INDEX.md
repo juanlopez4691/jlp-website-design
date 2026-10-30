@@ -7,6 +7,7 @@ Source of truth for visuals: the Penpot file (foundations, components, Home). Th
 - `assets/Figma/tokens-studio.json`: Tokens Studio export.
 - `README.md`: content and visual foundations.
 - `figma-build-guide.md`: layout of the Home page, block by block (written for Figma, valid for Penpot).
+- `components/<Name>/xl.png`: reference export of the block at `xl` from Penpot, for blocks only. Linked from the build issues in `jlp-website`.
 - `components/<Name>/README.md`: spec per component. `preview.html` is a live example and expects the CSS variables from `tokens.json`.
 
 Keep Penpot and these files in sync by hand when a token changes.
