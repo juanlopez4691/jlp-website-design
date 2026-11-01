@@ -13,7 +13,7 @@ The site is built in Astro in a separate repository, [jlp-website](https://githu
 - No em dashes or en dashes. Dates read "Jan 2021 to Present".
 - Sentence case for titles and buttons: "Get in touch", "Email me". Uppercase only for eyebrows, client tags and fact labels.
 - Each work card states what was built, then one line of result in `result` weight.
-- Every section has an eyebrow plus a title, and the two never repeat the same words: "What I do" / "Where I can help", "Selected work" / "Things I've built", "Process" / "How I work", "Experience" / "25+ years building for the web".
+- Every section has an eyebrow plus a title, and the two never repeat the same words: "What I do" / "Where I can help", "Selected work" / "Things I've built", "My process" / "How I work", "Experience" / "25+ years building for the web".
 - Quotes on the page are fragments taken from real recommendations, with the author named.
 
 ## Visual foundations
