@@ -69,7 +69,7 @@ Same blocks in the same order, one column, built on `Home / base 390`. Side padd
 - **Experience:** the git log line stays on the left (32 wide); the date pill sits above the title and text. Each row is as tall as its content, so spine and tick follow it.
 - **Stack:** groups stacked, chips wrap.
 - **Contact:** title (h2 mobile) and address (mail mobile) stacked, buttons stacked at full width, text below. No background engraving on phones.
-- **Footer:** three rows: copyright, then Download my CV and GitHub, then Legal notice, Privacy and Cookies; each row wraps if needed.
+- **Footer:** three rows: Download my CV and GitHub, then Legal notice, Privacy and Cookies, then the copyright; each row wraps if needed.
 
 ## Tablet (768px, `md`)
 Same blocks in the same order, built on `Home / md 768` (open menu: `Menu / md 768 (open)`). Side padding 32 (container 704), block padding 80, same `surface.*` fills, arrow centred. Display styles use `Display tablet` (tokens `font.size.*-md` and `font.tracking.*-md`: h1 60, h2 48, mail 48, quote-big 30); everything else keeps its desktop size.
