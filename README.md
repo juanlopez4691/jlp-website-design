@@ -18,7 +18,7 @@ The site is built in Astro in a separate repository, [jlp-website](https://githu
 
 ## Visual foundations
 
-**Color.** Mint is the ground. Each block takes one color: saffron (hero and recommendations), mint (services and experience), teal (work and contact), coral (quote and how I work), navy (facts, stack and footer). Text on saffron, coral and mint is `navy`. Text on teal and navy is `mint`. `saffron` is also the accent on navy and teal: core chips, the availability dot, the contact address, the stack labels.
+**Color.** Mint is the ground. Each block takes one color: saffron (hero and recommendations), mint (services and experience), teal (work and contact), coral (quote and how I work), navy (facts and stack), ink (footer). Text on saffron, coral and mint is `ink`. Text on teal, navy and ink is `mint`. `saffron` is also the accent on navy and teal: core chips, the availability dot, the contact address, the stack labels.
 
 **Shape.** Small labels are pills (`radius-full`): chips, fact pills, date pills. The client name on a work card is plain uppercase text in the `tag` style, not a pill. Buttons are square (`radius-none`, 0) so they never read as labels. Service cards round two opposite corners (`radius-48`, 48px, top right and bottom left). Each block after a block of a different colour starts with a pointed arrow in the previous block's colour (the Section arrow), so one block points into the next. Work cards are nearly square (`radius-lg`). All recommendation cards, featured or regular, share one radius (`radius-28`, 28px). Radius token names follow Tailwind: `radius-lg` is `rounded-lg`, `radius-full` is `rounded-full`, `radius-none` is `rounded-none`. The two values Tailwind has no class for are written as `rounded-[28px]` (`radius-28`) and `rounded-[48px]` (`radius-48`).
 
@@ -30,7 +30,7 @@ The site is built in Astro in a separate repository, [jlp-website](https://githu
 
 **Imagery.** Two engravings from Wikimedia Commons, both dark line on transparent, never inverted. The hero (desktop only) uses a woodcut of a blacksmith at the anvil: [Blacksmith at the anvil (Wellcome L0005875)](https://commons.wikimedia.org/wiki/File:Blacksmith_at_the_anvil._Wellcome_L0005875.jpg), from William Gilbert's De Magnete (1600), licensed CC BY 4.0. The contact block (desktop and tablet, hidden on phones) uses [Fig 25 Gentleman with two telephones 1880](https://commons.wikimedia.org/wiki/File:Fig_25_Gentleman_with_two_telephones_1880.jpg), an illustration by B. Bonnafoux from Théodose du Moncel's Le téléphone, le microphone et le phonographe (1880), in the public domain. It looks faint because the contact block is dark teal, not because of any opacity. Edits to the originals: the blacksmith is trimmed to the figure and both have the solid background removed, nothing else. The edited files live in `jlp-website/src/assets/`: the blacksmith file is 1314x1044 and the telephones file is 1256x1190, both 2x their display boxes. The blacksmith is CC BY 4.0, so the site must credit it, link the licence and say that it was trimmed and had its background removed. The telephones image needs no credit, but the credits page names its author and book anyway.
 
-**No** gradients, shadows, icons or emoji. Depth comes from color fields and borders (`2px` navy outlines, `1.5px` mint on dark blocks).
+**No** gradients, shadows, icons or emoji. Depth comes from color fields and borders (`2px` ink outlines, `1.5px` mint on dark blocks).
 
 ## Iconography
 
