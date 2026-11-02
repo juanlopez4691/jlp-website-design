@@ -55,7 +55,7 @@ Eyebrow "Tech stack" in saffron, `h2` "Tools I work with", auto-fit columns of 3
 Eyebrow directly over "Let's talk about what you're building." (no gap, as in the other blocks; the title is 620 wide at xl and 496 at md, so it wraps after "what"), then the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background (desktop and tablet): low-contrast engraving, dark line on transparent, behind the text, anchored to the right edge of the container (at xl, 64px short of the block edge), not past it; hidden on phones.
 
 ## Footer (navy)
-Padding 32 top and bottom, two rows 32px apart. Top row (space-between): on the left the eight site links as two columns of four (Home, Services, Work, Recommendations | Process, Experience, Stack, Contact), 8px between links and 48px between columns; on the right a column of three links, 8px apart (Download my CV, LinkedIn, GitHub). Bottom row (space-between, 8px padding top and bottom, aligned to the end): Legal notice, Privacy and Cookies on the left, separated by a bullet (`•`) with 12px on each side, and the copyright (14px, regular) on the right.
+Padding 32 top and bottom, two rows 32px apart. Top row (space-between): on the left the eight site links as two columns of four (Home, Services, Work, Recommendations | Process, Experience, Stack, Contact), 8px between links and 48px between columns; on the right a column of three links, 8px apart: LinkedIn, GitHub and, last, Download my CV (LinkedIn and GitHub are followed by `icon-external-link`, 8px after the text, in the text colour). Bottom row (space-between, 8px padding top and bottom, aligned to the end): Legal notice, Privacy and Cookies on the left, separated by a bullet (`•`) with 12px on each side, and the copyright (14px, regular) on the right.
 
 ## Phone (390px, `base`)
 Same blocks in the same order, one column, built on `Home / base 390`. Side padding 32 (container 326), block vertical padding 64 (`space-16`), same `surface.*` fills, arrow centred (96 x 40 stays). Only the Display styles shrink (see "Display mobile" in `tokens.json`; tokens `font.size.*-base` and `font.tracking.*-base`): h1 48, h2 36, mail 30, quote-big 24; every other style keeps its desktop size.
@@ -69,7 +69,7 @@ Same blocks in the same order, one column, built on `Home / base 390`. Side padd
 - **Experience:** the git log line stays on the left (32 wide); the date pill sits above the title and text. Each row is as tall as its content, so spine and tick follow it.
 - **Stack:** groups stacked, chips wrap.
 - **Contact:** title (h2 mobile) and address (mail mobile) stacked, buttons stacked at full width, text below. No background engraving on phones.
-- **Footer:** one column, 32px apart, side padding 32. The two columns of site links sit side by side, then the column of Download my CV, LinkedIn and GitHub, then the legal links (16px on each side of the bullet), then the copyright. 409px tall.
+- **Footer:** one column, 32px apart, side padding 32. The two columns of site links sit side by side, then the column of LinkedIn, GitHub and Download my CV, then the legal links (16px on each side of the bullet), then the copyright. 409px tall.
 
 ## Tablet (768px, `md`)
 Same blocks in the same order, built on `Home / md 768` (open menu: `Menu / md 768 (open)`). Side padding 32 (container 704), block padding 80, same `surface.*` fills, arrow centred. Display styles use `Display tablet` (tokens `font.size.*-md` and `font.tracking.*-md`: h1 60, h2 48, mail 48, quote-big 30); everything else keeps its desktop size.
@@ -83,4 +83,4 @@ Same blocks in the same order, built on `Home / md 768` (open menu: `Menu / md 7
 - **Experience:** git log as on desktop with the 176px date column, text column 432.
 - **Stack:** two columns of 340.
 - **Contact:** title (h2 tablet) and address (mail tablet) stacked, buttons side by side. The title is 496 wide. The background engraving keeps its desktop position, anchored to the right edge of the block (the container is full width here).
-- **Footer:** the same two rows as on desktop, in 640px (side padding 64): site links on the left, Download my CV, LinkedIn and GitHub on the right; legal links and copyright below. 256px tall.
+- **Footer:** the same two rows as on desktop, in 640px (side padding 64): site links on the left, LinkedIn, GitHub and Download my CV on the right; legal links and copyright below. 256px tall.
