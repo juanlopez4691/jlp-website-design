@@ -143,7 +143,7 @@
         "light": {
           "$value": "300",
           "$type": "fontWeights",
-          "$description": "Featured quote."
+          "$description": "Light weight. Not used by the featured quote any more (it is 400)."
         },
         "regular": {
           "$value": "400",
@@ -185,7 +185,7 @@
         "quote-big": {
           "$value": "36",
           "$type": "fontSizes",
-          "$description": "Featured recommendation. Figtree 300 (Light). Tailwind text-4xl (36px), leading tight."
+          "$description": "Featured recommendation. Figtree 400. Tailwind text-4xl (36px), leading tight."
         },
         "sub": {
           "$value": "30",
