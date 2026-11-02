@@ -52,7 +52,7 @@ Eyebrow "Experience", `h2` "25+ years building for the web". Rows drawn as a git
 Eyebrow "Tech stack" in saffron, `h2` "Tools I work with", auto-fit columns of 320px, gap 40 both ways. Group label: `label` saffron. Chips: 1.5px mint outline, `pill`. Core groups (CMS, Backend): saffron fill, navy text, weight 600.
 
 ## Contact (teal block)
-Eyebrow, then "Let's talk about what you're building." and the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background (desktop and tablet): low-contrast engraving, dark line on transparent, behind the text, anchored to the right edge of the block; hidden on phones.
+Eyebrow directly over "Let's talk about what you're building." (no gap, as in the other blocks; the title is 620 wide at xl and 496 at md, so it wraps after "what"), then the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background (desktop and tablet): low-contrast engraving, dark line on transparent, behind the text, anchored to the right edge of the container (at xl, 64px short of the block edge), not past it; hidden on phones.
 
 ## Footer (navy)
 One row, space-between, padding 24 top and bottom, three parts: Download my CV and GitHub on the left, Legal notice, Privacy and Cookies in the middle, the copyright on the right. Items in a group are separated by a bullet (`•`) with 12px on each side.
@@ -82,5 +82,5 @@ Same blocks in the same order, built on `Home / md 768` (open menu: `Menu / md 7
 - **How I work:** the four steps in a 2 x 2 grid (336 each, gap 32), the four principles in two columns.
 - **Experience:** git log as on desktop with the 176px date column, text column 432.
 - **Stack:** two columns of 340.
-- **Contact:** title (h2 tablet) and address (mail tablet) stacked, buttons side by side. The background engraving keeps its desktop position, anchored to the right edge of the block.
+- **Contact:** title (h2 tablet) and address (mail tablet) stacked, buttons side by side. The title is 496 wide. The background engraving keeps its desktop position, anchored to the right edge of the block (the container is full width here).
 - **Footer:** one row as on desktop: Download my CV and GitHub, legal links, copyright.
