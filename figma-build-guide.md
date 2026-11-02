@@ -54,7 +54,7 @@ Eyebrow "Tech stack" in saffron, `h2` "Tools I work with", auto-fit columns of 3
 ## Contact (teal block)
 Eyebrow directly over "Let's talk about what you're building." (no gap, as in the other blocks; the title is 620 wide at xl and 496 at md, so it wraps after "what"), then the address in `mail` (Figtree 400) saffron, two buttons (Email me: saffron fill; LinkedIn: mint outline), one line of text below. Background (desktop and tablet): low-contrast engraving, dark line on transparent, behind the text, anchored to the right edge of the container (at xl, 64px short of the block edge), not past it; hidden on phones.
 
-## Footer (navy)
+## Footer (ink)
 Padding 32 top and bottom, two rows 32px apart. Top row (space-between): on the left the eight site links as two columns of four (Home, Services, Work, Recommendations | Process, Experience, Stack, Contact), 8px between links and 48px between columns; on the right a column of three links, 8px apart: LinkedIn, GitHub and, last, Download my CV (LinkedIn and GitHub are followed by `icon-external-link`, 8px after the text, in the text colour). Bottom row (space-between, 8px padding top and bottom, aligned to the end): Legal notice, Privacy and Cookies on the left, separated by a bullet (`•`) with 12px on each side, and the copyright (14px, regular) on the right.
 
 ## Phone (390px, `base`)
