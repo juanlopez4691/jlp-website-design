@@ -4,12 +4,12 @@
    "saffron": {
     "value": "#f5b82e",
     "type": "color",
-    "description": "Primary accent. Hero and Recommendations blocks, service cards, availability dot, core-stack chips, labels and the contact address on dark blocks, buttons on dark blocks. Text on it is navy."
+    "description": "Primary accent. Hero and Recommendations blocks, service cards, availability dot, core-stack chips, labels and the contact address on dark blocks, buttons on dark blocks. Text on it is ink."
    },
    "coral": {
     "value": "#ff7f5c",
     "type": "color",
-    "description": "Secondary accent. Quote and How I work blocks, service cards. Text on it is navy."
+    "description": "Secondary accent. Quote and How I work blocks, service cards. Text on it is ink."
    },
    "teal": {
     "value": "#0d4a47",
@@ -19,12 +19,17 @@
    "mint": {
     "value": "#eef5f1",
     "type": "color",
-    "description": "Page ground and light text. Default background, cards on dark blocks, text on teal and navy."
+    "description": "Page ground and light text. Default background, cards on dark blocks, text on teal, navy and ink."
    },
    "navy": {
     "value": "#14213d",
     "type": "color",
-    "description": "Ink. All body text on light blocks, outlines, primary buttons, Facts, Stack and footer blocks."
+    "description": "Stack and Facts blocks and the featured quote card. Text on it is mint."
+   },
+   "ink": {
+    "value": "#020d22",
+    "type": "color",
+    "description": "Ink. Darkest color. All body text on light blocks, outlines, primary buttons, the availability pill and the footer. Text on it is mint."
    },
    "white": {
     "value": "#ffffff",

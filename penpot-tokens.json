@@ -4,12 +4,12 @@
       "saffron": {
         "$value": "#f5b82e",
         "$type": "color",
-        "$description": "Primary accent. Hero block, service card 1, tags, dates, core-stack chips, availability dot, buttons on dark blocks. Text on it is navy."
+        "$description": "Primary accent. Hero block, service card 1, tags, dates, core-stack chips, availability dot, buttons on dark blocks. Text on it is ink."
       },
       "coral": {
         "$value": "#ff7f5c",
         "$type": "color",
-        "$description": "Secondary accent. How I work block, service card 2, project tag 2. Text on it is navy."
+        "$description": "Secondary accent. How I work block, service card 2, project tag 2. Text on it is ink."
       },
       "teal": {
         "$value": "#0d4a47",
@@ -19,12 +19,17 @@
       "mint": {
         "$value": "#eef5f1",
         "$type": "color",
-        "$description": "Page ground and light text. Default background, cards on dark blocks, text on teal and navy."
+        "$description": "Page ground and light text. Default background, cards on dark blocks, text on teal, navy and ink."
       },
       "navy": {
         "$value": "#14213d",
         "$type": "color",
-        "$description": "Ink. All body text on light blocks, outlines, primary buttons, Stack and footer blocks."
+        "$description": "Stack and Facts blocks and the featured quote card. Text on it is mint."
+      },
+      "ink": {
+        "$value": "#020d22",
+        "$type": "color",
+        "$description": "Ink. Darkest color. All body text on light blocks, outlines, primary buttons, the availability pill and the footer. Text on it is mint."
       },
       "white": {
         "$value": "#ffffff",
@@ -503,9 +508,9 @@
         "$description": "Page background."
       },
       "ink": {
-        "$value": "{color.navy}",
+        "$value": "{color.ink}",
         "$type": "color",
-        "$description": "Default text."
+        "$description": "Ink fills: primary button, availability pill."
       },
       "hero": {
         "$value": "{color.saffron}",
@@ -536,13 +541,18 @@
         "$value": "{color.coral}",
         "$type": "color",
         "$description": "Quote block."
+      },
+      "footer": {
+        "$value": "{color.ink}",
+        "$type": "color",
+        "$description": "Footer block."
       }
     },
     "text": {
       "on-light": {
-        "$value": "{color.navy}",
+        "$value": "{color.ink}",
         "$type": "color",
-        "$description": ""
+        "$description": "Dark text and outlines on light blocks."
       },
       "on-dark": {
         "$value": "{color.mint}",
