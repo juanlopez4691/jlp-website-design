@@ -152,6 +152,16 @@
      "letterSpacing": "0"
     }
    },
+   "body-lg": {
+    "type": "typography",
+    "value": {
+     "fontFamily": "Figtree",
+     "fontWeight": "400",
+     "fontSize": "18",
+     "lineHeight": "27",
+     "letterSpacing": "0"
+    }
+   },
    "lead": {
     "type": "typography",
     "value": {
