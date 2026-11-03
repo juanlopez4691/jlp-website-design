@@ -1,4 +1,4 @@
-Experience entry drawn as a git log. A 32px graph column on the left holds a 2px ink line and a 14px node (`size.tick`), with a short tick that ends at the date pill. The date pill sits in a 176px column (`size.date-column`), then a 24px gap, then the text. Company goes on its own line under the role title, no bullet.
+Experience entry drawn as a git log. A 32px graph column on the left holds a 2px ink line and a 14px node (`size.tick`), with a short tick that ends at the date pill. The date pill sits in a 176px column (`size.date-column`), then a 24px gap, then the text. Company goes on its own line under the role title (16px, line height 1.25), no bullet. The description is in `body-lg` (18px, line height 1.5).
 
 Variants: `Position` and `Breakpoint` (`xl`, `base`). Position: `first` (saffron node, line only below), `middle` (line through) and `last` (line stops at the node). Stack them with no gap; each row keeps 40px of space at the bottom, except `last`. Newest entry first, so the line reads like `git log`.
 
