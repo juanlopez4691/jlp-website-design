@@ -222,6 +222,11 @@
           "$type": "fontSizes",
           "$description": "Hero paragraph. Tailwind text-lg (18px), leading relaxed. Max 36ch."
         },
+        "body-lg": {
+          "$value": "18",
+          "$type": "fontSizes",
+          "$description": "Descriptions in cards, steps, principles, job rows and regular quotes. Tailwind text-lg (18px), leading normal (27px)."
+        },
         "body": {
           "$value": "16",
           "$type": "fontSizes",
