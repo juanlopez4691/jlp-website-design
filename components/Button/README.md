@@ -2,21 +2,20 @@ Square buttons (`radius-none`, 0) with a 2px border. Padding 13px 24px, `button`
 
 Penpot variants: `Type` (`primary`, `secondary`, `accent`, `secondary-on-dark`) and `State` (`default`, `hover`, `focus`).
 
-- **Primary**: `ink` fill, `mint` text, ink border. One per block, on light blocks.
-- **Secondary**: transparent, ink border and text (`text.on-light`), on light blocks.
-- **Accent**: `saffron` fill, ink text, no visible border (the border is the fill color). The primary button on dark blocks (teal, navy, ink).
-- **Secondary-on-dark**: transparent, mint border and text, on dark blocks.
-- Labels in sentence case: "Tell me about your project", "Email me".
+| Type | Where | Default | Hover |
+|---|---|---|---|
+| primary | light blocks, one per block | `ink` fill and border, `mint` text | `saffron` fill, `ink` text, ink border |
+| secondary | light blocks | transparent, `ink` border and text | `ink` fill, `mint` text |
+| accent | dark blocks | `saffron` fill and border, `ink` text | `ink` fill and border, `mint` text |
+| secondary-on-dark | dark blocks | transparent, `mint` border and text | `mint` fill, `ink` text |
 
-Border rule: a light fill (saffron, mint) gets an ink border only where it would blend into the block behind it, such as primary on hover on the saffron Hero. On a dark block it has no visible border.
+Border rule: a light fill (saffron, mint) gets an ink border only where it would blend into the block behind it. On a dark block it has none, so `accent` has a saffron border, not an ink one. The hover of `primary` keeps its ink border because the saffron fill would blend into a saffron block.
 
-States:
+Focus (keyboard only): two rings outside the border, a 2px gap and then a 2px ring.
 
-| Type              | Hover                                     |
-| ----------------- | ----------------------------------------- |
-| primary           | `saffron` fill, ink border, ink label     |
-| secondary         | `ink` fill, `mint` label                  |
-| accent            | `ink` fill, `mint` label                  |
-| secondary-on-dark | `mint` fill, no visible border, ink label |
+| Type | Gap | Ring |
+|---|---|---|
+| primary, secondary | `mint` | `ink` |
+| accent, secondary-on-dark | `ink` | `saffron` |
 
-Focus (keyboard only): a 2px gap and then a 2px ring, outside the border. Light-block types (primary, secondary): mint gap, ink ring. Dark-block types (accent, secondary-on-dark): ink gap, saffron ring. In the site use `:hover` and `:focus-visible`, not `:focus`. The ring colors are plain values in Penpot, not tokens.
+In the site use `:focus-visible`, not `:focus`, and no `box-shadow`, so the focus stays visible in forced-colors mode. The gap and ring colors are plain values in Penpot, not tokens. Labels in sentence case: "Tell me about your project", "Email me".
