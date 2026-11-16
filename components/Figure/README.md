@@ -1,0 +1,1 @@
+Number with its label, used twice in the V2 `facts-block`. The number (Familjen Grotesk 72, line height 0.8, bold, tracking -1.8, `text.accent-on-dark`) sits above its label (18/1.375, `text.on-dark`, `font.size.text-lg`), 8px apart. Width hugs the content (159 and 179 at xl). No variants, so no `Breakpoint`. Penpot name `V2 / figure`.

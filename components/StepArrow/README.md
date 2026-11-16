@@ -1,0 +1,1 @@
+Arrow drawn over the rule of a V2 `step`. A 6px ink bar ending in a 28px chevron head (two 6px strokes at 45 degrees either way), in a 48px tall box. The bar stretches with the step (left and right constraints); the head stays at the right. The `step` places it absolutely, centred on the rule. No variants; the draw animation is in `how-block`. Penpot name `V2 / step-arrow`.
