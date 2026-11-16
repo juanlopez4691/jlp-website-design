@@ -1,1 +1,1 @@
-One principle in the "How I work" block: a title in `h3-service` and a paragraph in `body-lg` (18px, line height 1.5), no rule. Title and text wrap to the width of the column. Penpot name `principle`, variants `Breakpoint` xl, md, base.
+One principle in the "How I work" block: a title in `h3-service` and a paragraph in `body-lg` (18px, line height 1.5), no rule. Title and text wrap to the width of the column. In the How block the width is at most 666 (`max-w-prose`) at xl and md, 608 at lg and 326 at base. Penpot name `principle`, variants `Breakpoint` xl, md, base.
