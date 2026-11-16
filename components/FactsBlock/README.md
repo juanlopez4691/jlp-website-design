@@ -1,1 +1,5 @@
-Navy stripe (`surface.stack`), padding 32, with five `fact` items. Desktop: one row, spans 3, 2, 2, 2, 3 of 12. Tablet: two columns of 340, gap 24, in reading order: Core stack, Experience and Clients in the first column, Based in and Languages in the second (`grid grid-cols-2 gap-6`, each column `flex flex-col gap-6`). Phone: Core stack full width, then two columns of 151 (`flex flex-wrap gap-6`). No item has a fixed height: items are as tall as their text and the 24px gap separates them. Penpot name `facts-block`, variants `Breakpoint` xl, md, base.
+Navy block (`surface.stack`), padding 40 top and bottom, with two `figure`s (number and label) and three `fact`s: CORE STACK (PHP, Laravel, Statamic, WordPress, WooCommerce), BASED IN (Barcelona area, Spain) and LANGUAGES (Spanish, Catalan, English). All items are top-aligned (V1 bottom-aligned them).
+
+xl: one row, gap 48, widths 159, 179, 234, 156, 234 (CSS grid `max-content max-content 3fr 2fr 3fr`). lg: three columns of 304, gap 24 across and 32 down; row 1 holds the figures and Core stack, row 2 Based in and Languages. md: two columns of 340, gap 24 / 32. base: two columns of 151, gap 24 / 32. No item has a fixed height. Heights: xl 172, lg 266, md 388, base 501.
+
+The V1 `facts-block` in "01 Components" is unchanged. Penpot name `V2 / facts-block`, variants `Breakpoint` xl, lg, md, base.
