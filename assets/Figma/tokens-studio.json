@@ -62,6 +62,26 @@
      "letterSpacing": "-2.4"
     }
    },
+   "hero": {
+    "type": "typography",
+    "value": {
+     "fontFamily": "Familjen Grotesk",
+     "fontWeight": "700",
+     "fontSize": "88",
+     "lineHeight": "79.2",
+     "letterSpacing": "-2.2"
+    }
+   },
+   "step-number": {
+    "type": "typography",
+    "value": {
+     "fontFamily": "Familjen Grotesk",
+     "fontWeight": "700",
+     "fontSize": "176",
+     "lineHeight": "140.8",
+     "letterSpacing": "-7.04"
+    }
+   },
    "h2": {
     "type": "typography",
     "value": {
@@ -437,6 +457,16 @@
     }
    },
    "display-mobile": {
+    "hero": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Familjen Grotesk",
+      "fontWeight": "700",
+      "fontSize": "60",
+      "lineHeight": "54",
+      "letterSpacing": "-1.5"
+     }
+    },
     "h1": {
      "type": "typography",
      "value": {
@@ -479,6 +509,16 @@
     }
    },
    "display-tablet": {
+    "hero": {
+     "type": "typography",
+     "value": {
+      "fontFamily": "Familjen Grotesk",
+      "fontWeight": "700",
+      "fontSize": "72",
+      "lineHeight": "64.8",
+      "letterSpacing": "-1.8"
+     }
+    },
     "h1": {
      "type": "typography",
      "value": {

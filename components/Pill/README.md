@@ -7,7 +7,7 @@ In Penpot it is a single variant set with two properties: `Kind` (the role) and 
 | chip | on-light, on-dark | Technology. `pill` style (14px), 1.5px border in the text color, which is ink on light blocks. In the Stack block: mint outline; core groups fill with saffron. |
 | chip-filled | on-dark | Technology chip with a saffron fill, for core groups on dark blocks. |
 | date | on-light | Job period. `label` style (14px, weight 600), never wraps. |
-| fact | on-light, on-dark | `on-light`: 2px ink outline on light blocks. `on-dark`: same shape with a mint outline and mint text, label in saffron, for pills on dark blocks. The hero facts stripe no longer uses pills. Label in `tag` plus value in `pill`. |
+| fact | on-light, on-dark | `on-light`: 2px ink outline on light blocks. `on-dark`: same shape with a mint outline and mint text, label in saffron, for pills on dark blocks. The facts stripe does not use pills. Label in `tag` plus value in `pill`. |
 | availability | on-light | Ink fill (`surface.ink`), mint text in `label`, 10px saffron dot. |
 
-All pill and tag text is 14px (`pill` has line height 1.2 so chips stay compact). Padding: tags and chips are compact (`space-1` vertical, `space-3` horizontal). Date, fact and availability share a taller size (`space-2` vertical, `space-4` horizontal; the availability pill uses a 10px left padding so the round dot looks aligned).
+Every chip is as wide as its label plus padding and never clips, so instances have no fixed width (the date pills in Experience fill their 176 or 171px date column on purpose). All pill and tag text is 14px (`pill` has line height 1.2 so chips stay compact). Padding: tags and chips are compact (`space-1` vertical, `space-3` horizontal). Date, fact and availability share a taller size (`space-2` vertical, `space-4` horizontal; the availability pill uses a 10px left padding so the round dot looks aligned).

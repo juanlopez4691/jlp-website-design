@@ -170,7 +170,7 @@
         "h1": {
           "$value": "96",
           "$type": "fontSizes",
-          "$description": "Hero title. Tailwind text-8xl (96px), leading 0.95, tracking -2.4px. 48px on phones (see Display mobile in tokens.json)."
+          "$description": "V1 hero title and the Foundations specimen (the V2 hero uses font.size.hero). Tailwind text-8xl (96px), leading 0.95, tracking -2.4px. 48px on phones (see Display mobile in tokens.json)."
         },
         "h2": {
           "$value": "60",
@@ -317,6 +317,26 @@
           "$type": "fontSizes",
           "$description": "Hero title on phone (below md). Tailwind text-5xl."
         },
+        "hero": {
+          "$value": "88",
+          "$type": "fontSizes",
+          "$description": "V2 hero title at xl. Line height 0.9, tracking -2.2. Only the V2 hero uses it; h1 (96) is for the V1 hero and the Foundations specimen."
+        },
+        "hero-md": {
+          "$value": "72",
+          "$type": "fontSizes",
+          "$description": "V2 hero title at lg and md."
+        },
+        "hero-base": {
+          "$value": "60",
+          "$type": "fontSizes",
+          "$description": "V2 hero title on phone (below md)."
+        },
+        "step-number": {
+          "$value": "176",
+          "$type": "fontSizes",
+          "$description": "V2 step number in How I work. Line height 0.8, tracking -7.04."
+        },
         "h2-md": {
           "$value": "48",
           "$type": "fontSizes",
@@ -386,6 +406,26 @@
         },
         "h1-base": {
           "$value": "-1.2",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "hero": {
+          "$value": "-2.2",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "hero-md": {
+          "$value": "-1.8",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "hero-base": {
+          "$value": "-1.5",
+          "$type": "letterSpacing",
+          "$description": ""
+        },
+        "step-number": {
+          "$value": "-7.04",
           "$type": "letterSpacing",
           "$description": ""
         },
