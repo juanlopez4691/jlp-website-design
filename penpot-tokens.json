@@ -318,19 +318,19 @@
           "$description": "Hero title on phone (below md). Tailwind text-5xl."
         },
         "hero": {
-          "$value": "88",
+          "$value": "80",
           "$type": "fontSizes",
-          "$description": "V2 hero title at xl. Line height 0.9, tracking -2.2. Only the V2 hero uses it; h1 (96) is for the V1 hero and the Foundations specimen."
+          "$description": "V2 hero title at xl. Line height 0.9, tracking -2. Only the V2 hero uses it; h1 (96) is for the V1 hero and the Foundations specimen."
         },
         "hero-md": {
           "$value": "72",
           "$type": "fontSizes",
-          "$description": "V2 hero title at lg and md."
+          "$description": "V2 hero title from sm (640) up to xl: md and lg."
         },
         "hero-base": {
-          "$value": "60",
+          "$value": "56",
           "$type": "fontSizes",
-          "$description": "V2 hero title on phone (below md)."
+          "$description": "V2 hero title on phone (below sm, 640)."
         },
         "step-number": {
           "$value": "176",
@@ -410,7 +410,7 @@
           "$description": ""
         },
         "hero": {
-          "$value": "-2.2",
+          "$value": "-2",
           "$type": "letterSpacing",
           "$description": ""
         },
@@ -420,7 +420,7 @@
           "$description": ""
         },
         "hero-base": {
-          "$value": "-1.5",
+          "$value": "-1.4",
           "$type": "letterSpacing",
           "$description": ""
         },
