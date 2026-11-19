@@ -45,7 +45,7 @@ One quote taken from a recommendation: `quote-big` (36, weight 400), navy, max 8
 Eyebrow, `h2` "What people say about me". Featured quote: navy fill, mint text, `quote-big`, `radius-28`, padding 48. Under it four white cards (two columns, gap 24, `radius-28`, padding 32): quote first, then the author pinned to the bottom (50px round photo centred vertically against the name and role, name `lead` at weight 600 with the 12px `icon-external-link` linking to LinkedIn, role 14px, 8px between photo and text). Bottom right: link "Read them all on LinkedIn" with the same icon (`button` weight 600, navy).
 
 ## How I work (coral block)
-`V2 / how-block`. `section-header` ("My process", "How I work"), 48 below it four `step`s: xl one row of 258 (gap 40), lg one row of 210 (gap 40), md 2 x 2 of 336 (gap 32 across, 40 down), base stacked (gap 32). Steps are "Listen and learn", "Plan and propose", "Build and verify", "Launch and support", with the number in the step, not the title. Then, 64 below, at xl and lg the workshop engraving (304 x 464, `workshop image`, contained, vertically centred) and, 48 to its right, the four `principle`s in one column (gap 32, at most 666 wide; 608 at lg), vertically centred. The four principles are: I own the technical side end to end; I build for real use; Tests and static analysis in the pipeline; AI is part of my daily workflow (copy in the HowBlock README). The step number is `font.size.step-number` (176). The animation is described in the HowBlock README and the board `spec / how step animation`.
+`V2 / how-block`. `section-header` ("My process", "How I work"), 22 below it four `step`s (the digits read 48 below the header): xl one row of 258 (gap 40), lg one row of 210 (gap 40), md 2 x 2 of 336 (gap 32 across, 40 down), base stacked (gap 32). Steps are "Listen and learn", "Plan and propose", "Build and verify", "Launch and support", with the number in the step, not the title. Then, 64 below, at xl and lg the workshop engraving (304 x 464, `workshop image`, contained, vertically centred) and, 48 to its right, the four `principle`s in one column (gap 32, at most 666 wide; 608 at lg), vertically centred. The four principles are: I own the technical side end to end; I build for real use; Tests and static analysis in the pipeline; AI is part of my daily workflow (copy in the HowBlock README). The step number is `font.size.step-number` (176). The animation is described in the HowBlock README and the board `spec / how step animation`.
 
 ## Experience (mint block)
 Eyebrow "Experience", `h2` "25+ years building for the web". Rows drawn as a git log (see Job row): continuous 2px line, nodes and ticks aligned to the date pill centre, date column 176px (date pills fill it on purpose). Timeular row: "Co-owned the company website, payments infrastructure and services integration in a 2-person engineering team."
@@ -67,7 +67,7 @@ Same blocks in the same order, one column, built on `Home V2 / base 390`. Side p
 - **Facts:** two columns of 151, gap 24 across and 32 down. Items have auto height, never a fixed one. 501 tall.
 - **Cards:** services and recommendations in a single column at full width, gap 24, card padding 24 on recommendation cards (no author photo); cards grow to fit their text. Chips wrap. Work: two stacked featured cards, four primary and three secondary cards in one column of 326, gap 24 (4624 tall).
 - **Quote block:** decorative marks 128 wide in the corners, text left-aligned; author and role on separate lines (no leading dot).
-- **How I work:** four steps stacked (gap 32), then the four principles stacked at full width 326 (gap 32); no workshop image. 2025 tall.
+- **How I work:** four steps stacked (gap 32), then the four principles stacked at full width 326 (gap 32); no workshop image. 1999 tall.
 - **Experience:** the git log line stays on the left (32 wide); the date pill sits above the title and text. Each row is as tall as its content, so spine and tick follow it.
 - **Stack:** groups stacked, chips wrap.
 - **Contact:** title (h2 mobile) and address (mail mobile) stacked, buttons stacked at full width, text below. No background engraving on phones.
@@ -81,7 +81,7 @@ Same blocks in the same order, built on `Home V2 / md 768` (open menu: the `menu
 - **Facts:** two columns of 340, gap 24 across and 32 down. Items have auto height, never a fixed one. 388 tall.
 - **Cards:** two columns of 340 (gap 24) for services (rows 206, 206 and 188 high) and recommendations. Work: stacked featured cards, four primary cards in two columns of 340 and three secondary cards in two columns (2 + 1); 2818 tall. Cards in a row share the height of the tallest, and the author line stays pinned to the bottom of recommendation cards. No author photo on tablet.
 - **Quote block:** decorative marks 192 wide in the corners, 40px from the side (same as desktop), text 30 light in a 640px column centred in the block.
-- **How I work:** the steps in a 2 x 2 grid (336 each, gap 32 across, 40 down), then the four principles in one centred column (666), no workshop image. 1318 tall.
+- **How I work:** the steps in a 2 x 2 grid (336 each, gap 32 across, 40 down), then the four principles in one centred column (666), no workshop image. 1292 tall.
 - **Experience:** git log as on desktop with the 176px date column, text column 432.
 - **Stack:** two columns of 340.
 - **Contact:** title (h2 tablet) and address (mail tablet) stacked, buttons side by side. The title is 496 wide. The background engraving keeps its desktop position, anchored to the right edge of the block (the container is full width here).
@@ -97,7 +97,7 @@ Every block has an `lg` variant, built on `Home V2 / lg 1024`. Container 960, si
 - **Quote block:** md text sizes (quote 30, `quote-big` md), text column 768 centred, quotation marks 224 wide, 40px from the sides and 12px outside the top and bottom edges. 285 tall.
 - **Work:** featured cards in row layouts (heights 277 and 257), primary cards 468 wide, secondary cards in three columns of 304. 2187 tall.
 - **Recommendations:** featured card with md text sizes and padding 32; four cards in two columns of 468 (rows 424 and 316). About 1431 tall.
-- **How I work:** steps in one row of 210 (gap 40); workshop engraving and principles (608 wide) side by side. 1139 tall.
+- **How I work:** steps in one row of 210 (gap 40); workshop engraving and principles (608 wide) side by side. 1113 tall.
 - **Experience:** the xl layout in 960. About 1017 tall.
 - **Stack:** groups in three columns of 293 (gap 40). 847 tall.
 - **Contact:** md title and address sizes (`h2` md 48, `mail` md 48), heading 496 wide, engraving placed as at xl. 469 tall.
