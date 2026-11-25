@@ -15,8 +15,8 @@ Space above the row: 16px (Penpot and prototype). The 12px circle sits centered 
 Shared by the four blocks, below `md` (768). From `md` up the blocks are the grids they were.
 
 - Native horizontal scroll with scroll snap (`mandatory`, always stop). Cards snap centered while one is in view, to the left edge while two are. The experience timeline always snaps left, and its jobs are 90% of the container while one is in view. For the cards, at these widths, both place the card on the container's left edge.
-- The track bleeds to both screen edges and its first card starts at the container (32px). Gap between columns 20 (`space-5`).
-- One card in view: the card is as wide as the container, 326 at 390, so 12px of the next one shows. Two in view: `(container - 20) / 2`.
+- The track bleeds to both screen edges and its first card starts at the container (32px). Gap between columns 20 (`space-5`); the experience timeline uses 32 (`space-8`).
+- One card in view: the card is as wide as the container, 326 at 390, so 12px of the next one shows. Two in view: `(container - gap) / 2`.
 - Breaks: services shows two columns from 620, the other sliders two cards from 680.
 - All cards of a slider share the height of the tallest (experience jobs have no card, so they do not stretch). The last part stays pinned to the bottom.
 - No scrollbar. Prefers-reduced-motion: a dot jumps instead of scrolling.

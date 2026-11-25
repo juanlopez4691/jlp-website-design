@@ -12,7 +12,7 @@ A stop of the horizontal timeline. Same text styles as above, in one column: gra
 
 - Graph: 30px tall, over the pill. A 2px ink line with its centre 7px from the top, the 14px node on it, and a 1.5px connector from the node to the pill (16px).
 - Node and connector are centered over the date pill, whatever its width. The pill is as wide as its text plus padding and starts at the left edge of the job.
-- The line is continuous across the 20px gaps. It starts at the first node and stops at the last one.
+- The line is continuous across the 32px gaps: each rail reaches into the gap up to the next job. It starts at the first node and stops at the last one.
 - The newest job comes first and its node is saffron; the others are ink.
 - Jobs have no box. Their height follows the content, top-aligned.
 
