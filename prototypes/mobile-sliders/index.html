@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototype: mobile sliders</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Figtree:wght@300;400;500;600&display=swap">
+<style>
+:root{--mint:#eef5f1;--ink:#020d22;--navy:#14213d;--saffron:#f5b82e;--coral:#ff7f5c;--teal:#0d4a47;
+  --w:390px;--gap:20px;--pad:32px;--card:326px}
+*{box-sizing:border-box}
+body{margin:0;font:400 18px/1.5 Figtree,sans-serif;color:var(--ink);background:#c9d1cd}
+h2,h3,h4,p{margin:0}
+h2,h3,h4,.result{font-family:"Familjen Grotesk",sans-serif;font-weight:700}
+.phone{width:min(var(--w),100%);margin:0 auto;background:var(--mint);overflow-x:clip}
+.phone>img{display:block;width:100%}
+
+/* blocks, values from Penpot "Home V2 / base 390" */
+.block{position:relative;padding:64px var(--pad)}
+.block>.arrow{position:absolute;left:50%;top:0;margin-left:-48px}
+.services{background:var(--mint)}
+.work{background:var(--teal);color:var(--mint)}
+.recs{background:var(--saffron)}
+.exp{background:var(--mint)}
+.tag{font-weight:600;font-size:14px;line-height:1.5;letter-spacing:1.84px;text-transform:uppercase}
+h2{font-size:36px;line-height:1;letter-spacing:-.9px}
+.more-title{font-size:30px;line-height:1.25;margin:48px 0 16px}
+.body{margin-top:48px}
+.client{font-weight:600;font-size:14px;line-height:1.5;letter-spacing:1px;text-transform:uppercase}
+.leaf{border-radius:0 48px 0 48px}
+.service{padding:32px;display:flex;flex-direction:column;gap:12px}
+.service h3{font-size:24px;line-height:1.25}
+.saffron{background:var(--saffron);color:var(--ink)}
+.coral{background:var(--coral);color:var(--ink)}
+.teal{background:var(--teal);color:var(--mint)}
+.featured{background:var(--mint);color:var(--ink);overflow:hidden;display:flex;flex-direction:column}
+.featured .panel{padding:32px}
+.featured .result{font-size:36px;line-height:1;letter-spacing:-.9px;margin-top:8px}
+.featured .text{padding:32px;display:flex;flex-direction:column;gap:16px;flex:1}
+.featured h3,.outline h3{font-size:24px;line-height:1.25}
+.desc{line-height:1.625;flex:1}
+.card{background:var(--mint);color:var(--ink);padding:32px;display:flex;flex-direction:column;gap:16px}
+.card .result{font-size:30px;line-height:1.1;letter-spacing:-.75px;margin-top:8px}
+.card h3{font-size:20px;line-height:1.25}
+.outline{border:1.5px solid var(--mint);padding:30.5px;display:flex;flex-direction:column;gap:16px}
+.outline h3{margin-top:4px}
+.outline .chips{padding-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1.5px solid;border-radius:999px;padding:2.5px 10.5px;font-weight:500;font-size:14px;line-height:1.2}
+.quote{border-radius:28px;padding:24px;background:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.quote .q>*+*{margin-top:16px}
+.quote.big{background:var(--navy);color:var(--mint)}
+.quote.big .q{font-size:24px;line-height:1.375;letter-spacing:-.6px}
+.quote .name{font-weight:600;line-height:1.25}
+.quote .role{font-size:14px;line-height:1.25;margin-top:2px}
+.author{display:flex;gap:8px;align-items:center}
+.ph{flex:none;width:50px;height:50px;border-radius:50%;background:var(--teal)} /* photo placeholder, as in Penpot */
+.ico{width:12px;height:12px;margin-left:8px}
+.all{display:block;text-align:right;font-size:16px;color:inherit;text-decoration:none;margin-top:24px}
+.toggle{display:none;font:500 16px/1.5 Figtree;color:inherit;background:none;border:0;padding:4px 0;text-decoration:underline;cursor:pointer;margin-top:8px}
+.clamp .long:not(.open) p+p{display:none} /* cut at the paragraph, never mid-sentence */
+.clamp .toggle{display:block}
+
+/* stacked (current design) */
+.track{display:grid;gap:24px;position:relative;list-style:none;margin:0;padding:0}
+.track>*{min-width:0}
+.feat-stack{display:grid;gap:24px;margin-bottom:24px}
+.feat-stack:empty{display:none}
+
+/* slider */
+.slider.on .track{grid-auto-flow:column;grid-auto-columns:var(--card);gap:24px var(--gap);
+  margin-inline:calc(-1*var(--pad));padding-inline:var(--pad);scroll-padding-inline:var(--pad);
+  overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slider.on .track::-webkit-scrollbar{display:none}
+.slider.on .track>*{scroll-snap-align:start;scroll-snap-stop:always}
+.center .slider.on .track>*{scroll-snap-align:center}
+.center .slider.on .track{padding-inline:max(var(--pad),calc((var(--w) - var(--card))/2));scroll-padding-inline:0}
+.slider.on.rows2 .track{grid-auto-flow:row;grid-template-columns:repeat(3,var(--card))}
+.own .slider.on .track{align-items:start}
+.track:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.nav{display:none;align-items:center;justify-content:space-between;margin-top:16px;min-height:44px}
+.slider.on .nav{display:flex}
+.nav-none .slider.on .nav{display:none}
+.dots{display:flex;margin-left:-6px}
+.dots button{width:24px;height:44px;padding:0;border:0;background:none;color:inherit;cursor:pointer;display:grid;place-items:center}
+.dots button::before{content:"";width:12px;height:12px;border:2px solid;border-radius:999px}
+.dots button[aria-current]::before{background:currentColor}
+.count{font-weight:600;font-size:14px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:44px;height:44px;border:2px solid;background:none;color:inherit;cursor:pointer;font:500 20px/1 Figtree}
+.arrows button[aria-disabled=true]{opacity:.35}
+.nav-dots .arrows,.nav-dots .count,.nav-arrows .dots,.nav-both .count{display:none}
+.nav-dots .nav{justify-content:center}
+.nav-dots .dots{margin:0}
+
+/* experience: today's vertical log, or a horizontal timeline */
+.job{position:relative}
+.job .date{display:inline-block;background:var(--saffron);border-radius:999px;padding:8px 16px;font-weight:600;font-size:14px;line-height:1.5;white-space:nowrap;position:relative}
+.job h3{font-size:24px;line-height:1.25;margin-top:12px}
+.job .company{font-size:16px;line-height:1.25;margin:4px 0 8px}
+.job .line,.job .tick,.job .node{position:absolute;background:var(--ink)}
+.job .node{width:14px;height:14px;border-radius:50%;border:2px solid var(--ink)}
+.job.newest .node{background:var(--saffron)}
+#jobs:not(.on) .track{gap:0}
+#jobs:not(.on) .job{padding:0 0 40px 32px}
+#jobs:not(.on) .job:last-child{padding-bottom:0}
+#jobs:not(.on) .line{left:11px;width:2px;top:0;bottom:0}
+#jobs:not(.on) .job:first-child .line{top:18px}
+#jobs:not(.on) .job:last-child .line{bottom:auto;height:18px}
+#jobs:not(.on) .rail{display:none}
+#jobs:not(.on) .tick{left:-20px;width:20px;top:18px;height:1.5px}
+#jobs:not(.on) .node{left:-27px;top:12px}
+/* The node sits over the center of its date, whatever its width: the line is the left and right half
+   of the date (::before, ::after) plus the rail, which fills the rest up to the next job. */
+#jobs.on .job{padding-top:30px}
+#jobs.on .head{display:grid;grid-template-columns:auto 1fr}
+#jobs.on .line{display:none}
+#jobs.on .rail{position:relative}
+#jobs.on .rail::before,#jobs.on .date::before,#jobs.on .date::after{content:"";position:absolute;top:-24px;height:2px;background:var(--ink)}
+#jobs.on .rail::before{left:-1px;right:calc(-1*var(--gap) - 1px)} /* 1px overlaps hide the seams */
+#jobs.on .date::before{left:0;right:calc(50% - 1px)}
+#jobs.on .date::after{left:50%;right:0}
+#jobs.on .job:first-child .date::before,#jobs.on .job:last-child .date::after,#jobs.on .job:last-child .rail{display:none}
+#jobs.on .tick{left:50%;width:1.5px;margin-left:-.75px;top:-17px;height:17px}
+#jobs.on .node{left:50%;margin-left:-7px;top:-30px;z-index:1}
+.tl-pills #jobs.on .job{padding-top:0}
+.tl-pills #jobs.on .rail::before{top:18px}
+.tl-pills #jobs.on :is(.tick,.node),.tl-pills #jobs.on .date::before,.tl-pills #jobs.on .date::after{display:none}
+#jobs.on .track{padding-inline:var(--pad);scroll-padding-inline:var(--pad)}
+#jobs.on .track>*{scroll-snap-align:start}
+#jobs.on.jc .track{padding-inline:calc((var(--w) - var(--card))/2)}
+#jobs.on:is(.jc,.je) .track{scroll-padding-inline:0}
+#jobs.on:is(.jc,.je) .track>*{scroll-snap-align:center}
+
+/* 431 to 767 exploration */
+.wide .phone>img{display:none}
+.grid2 .track{grid-template-columns:repeat(2,var(--card))}
+.same #featured{grid-template-columns:repeat(auto-fill,var(--card))}
+.same #featured{justify-content:start}
+.same.center #featured{justify-content:center}
+.nav[hidden],#panel [hidden]{display:none!important}
+
+/* test panel: not part of the design */
+#panel{position:fixed;z-index:9;right:16px;bottom:16px;width:290px;background:#fff;border:2px solid var(--ink);font-size:14px;line-height:1.4;max-height:85vh;overflow:auto}
+#panel summary{padding:10px 14px;cursor:pointer;font-weight:600}
+#panel form{padding:0 14px 14px;display:grid;gap:8px}
+#panel label{display:flex;justify-content:space-between;align-items:center;gap:8px}
+#panel input[type=range]{width:120px}
+#panel select{width:150px;font:inherit}
+#panel b{font-weight:600}
+#out{border-top:1px solid #bbb;padding-top:8px;white-space:pre-line;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body class="nav-dots">
+<main class="phone">
+  <img src="../../components/Header/base.png" alt="Header (static image)">
+  <img src="../../components/HeroBlock/base.png" alt="Hero block (static image)">
+  <img src="../../components/FactsBlock/base.png" alt="Facts block (static image)">
+  <section class="block services" data-arrow="#14213d">
+    <p class="tag">Services</p><h2>How I can help</h2>
+    <div class="body slider" id="services" aria-label="Services"></div>
+  </section>
+  <img src="../../components/QuoteBlock/base.png" alt="Quote block (static image)">
+  <section class="block work" data-arrow="#ff7f5c">
+    <p class="tag">Selected work</p><h2>Things I've built</h2>
+    <div class="body feat-stack" id="featured"></div>
+    <div class="slider" id="selected" aria-label="Selected work"></div>
+    <h3 class="more-title">More work</h3>
+    <div class="slider" id="more" aria-label="More work"></div>
+  </section>
+  <section class="block recs" data-arrow="#0d4a47">
+    <p class="tag">Recommendations</p><h2>What people say about me</h2>
+    <div class="body feat-stack" id="recFeatured"></div>
+    <div class="slider" id="recs" aria-label="Recommendations"></div>
+    <a class="all" href="#">Read them all on LinkedIn<span data-ico></span></a>
+  </section>
+  <img src="../../components/HowBlock/base.png" alt="How block (static image)">
+  <section class="block exp" data-arrow="#ff7f5c">
+    <p class="tag">Experience</p><h2>25+ years building for the web</h2>
+    <div class="body slider" id="jobs" aria-label="Experience"></div>
+  </section>
+  <img src="../../components/StackBlock/base.png" alt="Stack block (static image)">
+  <img src="../../components/ContactBlock/base.png" alt="Contact block (static image)">
+  <img src="../../components/Footer/base.png" alt="Footer (static image)">
+</main>
+
+<details id="panel">
+  <summary>Test controls</summary>
+  <form>
+    <label>Services <select name="services"><option value="rows2">slider, 2 rows<option value="slider">slider, 1 row<option value="stack">stacked (now)</select></label>
+    <label>Selected work <select name="selected"><option value="slider">2 featured + slider<option value="all">all 6 in slider<option value="stack">stacked (now)</select></label>
+    <label>More work <select name="more"><option value="slider">slider<option value="stack">stacked (now)</select></label>
+    <label>Recommend. <select name="recs"><option value="slider">slider<option value="stack">stacked (now)</select></label>
+    <label>Experience <select name="jobs"><option value="slider">timeline<option value="stack">stacked (now)</select></label>
+    <label>Timeline <select name="tl"><option value="nodes">line with nodes<option value="pills">line through dates</select></label>
+    <label>Job width <select name="jobW"><option value=".9">90%<option value="1">full, like cards<option value=".85">85%, next one shows<option value=".7">70%</select></label>
+    <label>Timeline snap <select name="jobS"><option value="">left<option value="jc">center<option value="je">center, ends at edges</select></label>
+    <label>Job order <select name="jobO"><option value="new">newest first<option value="old">oldest first, opens at newest</select></label>
+    <label>Navigation <select name="nav"><option value="dots">dots<option value="arrows">counter + arrows<option value="both">dots + arrows<option value="none">none, peek only</select></label>
+    <label>Snap <select name="snap"><option value="center">center<option value="start">left edge</select></label>
+    <label>Card height <select name="height"><option value="equal">equal in slider<option value="own">own height</select></label>
+    <label>Long quotes <select name="quotes"><option value="clamp">Read more<option value="full">full text</select></label>
+    <label id="screen">Screen <b id="wOut"></b><input type="range" name="w" min="360" max="767" value="390" list="ws"></label>
+    <datalist id="ws"><option>360<option>390<option>430<option>480<option>560<option>640<option>700<option>767</datalist>
+    <strong>Between 431 and 767</strong>
+    <label>Layout <select name="wide"><option value="two">1 card, 2 from break<option value="fluid">1 full-width card<option value="cap">max card width<option value="grid">slider, grid from break</select></label>
+    <label>Break, services <b id="bsOut"></b><input type="range" name="brkS" min="560" max="760" step="10" value="620"></label>
+    <label>Break, rest <b id="bOut"></b><input type="range" name="brk" min="560" max="760" step="10" value="680"></label>
+    <label>Max card <b id="cOut"></b><input type="range" name="cap" min="326" max="480" step="2" value="326"></label>
+    <label>Featured <select name="feat"><option value="full">full width<option value="same">same as slider cards</select></label>
+    <div id="out" aria-live="polite"></div>
+    <button type="reset">Reset</button>
+  </form>
+</details>
+
+<script>
+const $ = id => document.getElementById(id);
+const ICO = '<svg class="ico" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 0h4v4"/><path d="M4.667 7.335 12 0"/><path d="M10 6.668v4a1.333 1.333 0 0 1-1.333 1.333H1.333A1.333 1.333 0 0 1 0 10.668V3.335a1.333 1.333 0 0 1 1.333-1.334h4"/></svg>';
+const chips = c => `<div class="chips">${c.split(',').map(x => `<span>${x}</span>`).join('')}</div>`;
+const services = [
+  ['saffron','WordPress','Custom themes, plugins, WooCommerce stores and checkout flows, with APIs, CRM, ERP and payment integrations.'],
+  ['coral','Laravel and Statamic','Web apps, APIs and Filament admin panels, and Statamic sites with tailored content models and custom fieldtypes.'],
+  ['teal','Migrations','From legacy platforms and static sites to WordPress or Statamic, keeping your content, URLs and SEO.'],
+  ['teal','Performance','Faster sites and apps: Core Web Vitals, slow queries, caching and profiling.'],
+  ['saffron','APIs and integrations','Design and implementation of APIs and integrations with third-party services.'],
+  ['coral','Maintenance and support','Updates, security fixes, monitoring and improvements after launch.'],
+].map(([c,t,d]) => `<li class="service leaf ${c}"><h3>${t}</h3><p>${d}</p></li>`);
+const featured = [
+  ['saffron','Zone Soft','Full regulatory compliance from launch.','TicketBAI e-invoicing compliance','A centralized API that bridges TicketBAI e-invoicing for all three Basque provinces (Álava, Bizkaia and Gipuzkoa), with XAdES-T digital signatures.','Slim Framework,SOLID,XAdES-T'],
+  ['coral','8Belts','Load times under 1.5 s.','Ecommerce checkout and integrations','A WooCommerce site with a fully custom sales and checkout flow and integrations with Holded, HubSpot and the 8Belts platform API.','WooCommerce,Holded,HubSpot'],
+].map(([c,cl,r,t,d,k]) => `<li class="featured leaf"><div class="panel ${c}"><p class="client">${cl}</p><p class="result">${r}</p></div><div class="text"><h3>${t}</h3><p class="desc">${d}</p>${chips(k)}</div></li>`);
+const primary = [
+  ['Efiori','Flowers delivered on time.','Marketplace automation','Automated business-logic validation for a floral marketplace, plus a custom delivery-date engine based on customer location, order date, product stock and delivery service availability.','WooCommerce'],
+  ['Vibliotec','A video learning SaaS from scratch.','Video training platform','A custom video player, protected Vimeo delivery, minute-synced comments and a module that lets users resume the last-viewed course video across devices.','Craft CMS,Vimeo'],
+  ['Play Your Brand','A flawless database migration.','Custom CRM &amp; DB migration','Co-led the architecture, database design and full implementation, and introduced CI/CD and automated testing. Led the full database migration to the new schema.','Laravel,Filament'],
+  ['Abacum','From static to CMS driven site.','Website migration to WordPress','Migrated the SaaS product website from Webflow to WordPress with a new design, integrations with Brevo, HubSpot and other external services.','Webflow,WordPress'],
+].map(([cl,r,t,d,k]) => `<li class="card leaf"><div><p class="client">${cl}</p><p class="result">${r}</p></div><h3>${t}</h3><p class="desc">${d}</p>${chips(k)}</li>`);
+const more = [
+  ['Mútua de Propietarios','Websites, portals and agent tools','Responsible for the corporate website, the satellite sites and landing pages, the web apps and management portals for insurance agents.','Joomla,WordPress,CakePHP,Laravel'],
+  ['Timeular (now EARLY)','Website, subscriptions and SaaS link',"Member of the team responsible for maintaining the website, the Stripe subscriptions and payments system, and the connection with the product's SaaS platform.",'WordPress,WooCommerce,Stripe'],
+  ['Verse','Migrate static site to WordPress','Migrated a static Angular site to WordPress, keeping all existing content and giving the team full control over page structure.','WordPress,Gutenberg,ACF'],
+].map(([cl,t,d,k]) => `<li class="outline leaf"><div><p class="client">${cl}</p><h3>${t}</h3></div><p class="desc">${d}</p>${chips(k)}</li>`);
+const quote = (n,r,ps,big) => `<${big?'div':'li'} class="quote${big?' big':''}"><div><div class="q${ps.length>1?' long':''}">${ps.map(p=>`<p>${p}</p>`).join('')}</div>${ps.length>1?'<button type="button" class="toggle" aria-expanded="false">Read more</button>':''}</div><div class="author"><span class="ph"></span><div><p class="name">${n}${ICO}</p><p class="role">${r}</p></div></div></${big?'div':'li'}>`;
+const recFeatured = quote('Carlos Alberto García de la Calera Dassi','Senior Product Manager, client · Translated from Spanish',['I had the chance to work with Joan and my experience was excellent. He is a WordPress developer with solid technical ability, especially notable for the quality and clarity of his code and his concern for building scalable, maintainable solutions.'],true);
+const recs = [
+  quote('Manuel Bruschi','Co-Founder and CEO, Timeular (now EARLY)',["WooCommerce and payment systems can be a beasts, but Joan's optimistic attitude, attention to detail, extensive experience, and persistence managed to tame them. Besides that everyone within the company loved to have his uplifting attitude around."]),
+  quote('Julià Mestieri Ferrer','Web developer colleague at netzstrategen',['I had the chance to work with Joan for about 1 year at netzstrategen. Both of us were web developers in the same team and worked together in lots of big and small projects: corporate sites, e-commerce, media publishers...','I learned a lot from Joan. His huge experience is supporting all his decisions. He can manage customers and projects assertively and meeting all the best expectations.']),
+  quote('Jordi Pallarés','IT consultant and developer, XMi Tech',["I had the pleasure of working with Joan on several projects. He is an excellent developer and someone I've always been able to rely on. He takes ownership of his work, pays close attention to detail, and consistently delivers high-quality results."]),
+  quote('Tom Mursell','CMO, Timeular (now EARLY)',["Joan's great to work with. He's super supportive, knowledgeable, great at what he does and always there to help carry the team through hard projects (we worked on our fair share of those together)."]),
+];
+
+const jobs = [
+  ['Jan 2021 to Present','Backend Architect and Co-Founder','somoscuatro','Technical delivery for 15+ client companies across ecommerce, SaaS and content platforms. Architecture, database design, CI/CD and automated testing.'],
+  ['Jan 2021 to Mar 2022','Senior Web Developer','Timeular (now EARLY), engaged via somoscuatro','Co-owned the company website, payments infrastructure and services integration in a 2-person engineering team.'],
+  ['Aug 2017 to Jan 2021','Senior Web Developer','netzstrategen GmbH','WordPress and WooCommerce projects for 15+ clients at a German digital agency, including complex multisite ecosystems.'],
+  ['Apr 2013 to Sep 2017','Senior Web Developer','XMi Tech, client: Mútua de Propietarios',"Corporate and satellite websites, plus insurance agent tools with CakePHP and Laravel. Led the adoption of Git and designed the company's first CI/CD toolchain."],
+  ['Jan 1995 to Apr 2013','Freelance Web Developer','Diverse customers','Interactive applications in Macromedia Director and Flash. Web development with HTML, CSS, JavaScript, PHP, WordPress and Joomla.'],
+].map(([d,t,c,b], i) => `<li class="job${i ? '' : ' newest'}"><span class="line"></span><div class="head"><span class="date">${d}<span class="tick"></span><span class="node"></span></span><span class="rail"></span></div><h3>${t}</h3><p class="company">${c}</p><p>${b}</p></li>`);
+
+/* ---------- slider: native scroll-snap, JS only syncs the navigation ---------- */
+function render(id, items, mode) {
+  const el = $(id), on = mode !== 'stack';
+  el.classList.toggle('on', on);
+  el.classList.toggle('rows2', mode === 'rows2');
+  el.innerHTML = `<ul class="track" ${on ? `role="group" aria-label="${el.getAttribute('aria-label')} slider" tabindex="0"` : ''}>${items.join('')}</ul>
+    <div class="nav"><div class="dots"></div><span class="count"></span><div class="arrows"><button type="button" aria-label="Previous">←</button><button type="button" aria-label="Next">→</button></div></div>`;
+  if (!on) return;
+  const track = el.querySelector('.track'), dots = el.querySelector('.dots'), [prev, next] = el.querySelectorAll('.arrows button');
+  const cols = mode === 'rows2' ? 3 : items.length;
+  // Snap positions, clamped to what can be scrolled (the last card cannot always reach its snap edge)
+  const stops = () => {
+    const max = track.scrollWidth - track.clientWidth, centered = id === 'jobs' ? el.matches('.jc,.je') : document.body.classList.contains('center');
+    return [...new Set([...track.children].slice(0, cols).map(c => {
+      const edge = centered ? (track.clientWidth - c.offsetWidth) / 2 : parseFloat(getComputedStyle(track).paddingLeft);
+      return Math.round(Math.max(0, Math.min(max, c.offsetLeft - edge)));
+    }))]; // cards that share a stop (several visible at once) share a dot
+  };
+  const n = stops().length;
+  el.querySelector('.nav').hidden = n < 2;
+  const current = () => stops().reduce((b, s, i, a) => Math.abs(s - track.scrollLeft) < Math.abs(a[b] - track.scrollLeft) ? i : b, 0);
+  const go = i => track.scrollTo({ left: stops()[Math.max(0, Math.min(n - 1, i))], behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  dots.innerHTML = Array.from({ length: n }, (_, i) => `<button type="button" aria-label="Go to ${i + 1} of ${n}"></button>`).join('');
+  [...dots.children].forEach((d, i) => d.onclick = () => go(i));
+  prev.onclick = () => go(current() - 1);
+  next.onclick = () => go(current() + 1);
+  const sync = () => {
+    const i = current();
+    [...dots.children].forEach((d, j) => j === i ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current'));
+    el.querySelector('.count').textContent = `${i + 1} / ${n}`;
+    prev.setAttribute('aria-disabled', i === 0);
+    next.setAttribute('aria-disabled', i === n - 1);
+  };
+  track.addEventListener('scroll', sync, { passive: true });
+  sync();
+}
+
+const form = document.querySelector('#panel form');
+function draw(v) {
+  render('services', services, v.services);
+  const inSlider = v.selected === 'all';
+  $('featured').innerHTML = inSlider ? '' : featured.join('').replaceAll('<li', '<div').replaceAll('</li>', '</div>');
+  $('selected').classList.toggle('body', inSlider);
+  render('selected', inSlider ? [...featured, ...primary] : primary, v.selected);
+  render('more', more, v.more);
+  $('recFeatured').innerHTML = recFeatured;
+  render('recs', recs, v.recs);
+  const old = v.jobs !== 'stack' && v.jobO === 'old';
+  render('jobs', old ? [...jobs].reverse() : jobs, v.jobs);
+  if (old) { const t = document.querySelector('#jobs .track'); t.scrollLeft = t.scrollWidth; }
+}
+const heights = () => Object.fromEntries(['services', 'work', 'recs', 'exp'].map(c => [c, Math.round(document.querySelector('.' + c).getBoundingClientRect().height)]));
+function update() {
+  const s = document.documentElement.style, v = Object.fromEntries(new FormData(form));
+  // Real small screens use their own width; from 768 up the range simulates it
+  const real = document.documentElement.clientWidth < 768;
+  const W = real ? document.documentElement.clientWidth : +v.w, inner = W - 64, wide = W > 430;
+  const grid = v.wide === 'grid', ids = ['services', 'selected', 'more', 'recs', 'jobs'];
+  const two = id => wide && (grid || v.wide === 'two') && W >= +(id === 'services' ? v.brkS : v.brk);
+  const card = id => two(id) ? (inner - (grid ? 24 : 20)) / 2 : (wide && v.wide === 'cap' ? Math.min(inner, +v.cap) : inner) * (id === 'jobs' ? +v.jobW : 1);
+  s.setProperty('--w', W + 'px');
+  ids.forEach(id => $(id).style.setProperty('--card', card(id) + 'px'));
+  $('featured').style.setProperty('--card', card('selected') + 'px');
+  $('screen').hidden = real; $('wOut').textContent = W; $('bsOut').textContent = v.brkS; $('bOut').textContent = v.brk; $('cOut').textContent = v.cap;
+  // baseline: today's fully stacked design with full quotes
+  document.body.className = '';
+  ids.forEach(id => $(id).classList.remove('grid2'));
+  draw({ services: 'stack', selected: 'stack', more: 'stack', recs: 'stack', jobs: 'stack' });
+  const a = heights();
+  document.body.className = `nav-${v.nav} ${v.snap === 'center' ? 'center' : ''} ${v.height === 'own' ? 'own' : ''} ${v.quotes === 'clamp' ? 'clamp' : ''}`;
+  document.body.classList.toggle('tl-pills', v.tl === 'pills');
+  document.body.classList.toggle('wide', wide);
+  ids.forEach(id => $(id).classList.toggle('grid2', grid && two(id) && id !== 'jobs'));
+  document.body.classList.toggle('same', wide && v.feat === 'same' && card('selected') < inner);
+  ['jc', 'je'].forEach(c => $('jobs').classList.toggle(c, v.jobS === c && !two('jobs')));
+  if (ids.some(two)) document.body.classList.remove('center'); // two per view can only align left
+  if (grid) ids.filter(id => id !== 'jobs' && two(id)).forEach(id => v[id] = 'stack');
+  draw(v);
+  const b = heights(), sum = o => Object.values(o).reduce((x, y) => x + y);
+  $('out').textContent = Object.keys(a).map(k => `${k}: ${a[k]} → ${b[k]} px`).join('\n') + `\nsaved: ${sum(a) - sum(b)} px (${Math.round(100 * (1 - sum(b) / sum(a)))}% of the four blocks)\ncards: services ${Math.round(card('services'))} px, rest ${Math.round(card('selected'))} px`;
+}
+document.querySelectorAll('[data-arrow]').forEach(b => b.insertAdjacentHTML('afterbegin', `<svg class="arrow" aria-hidden="true" width="96" height="40"><path fill="${b.dataset.arrow}" d="M0 0H96A48 40 0 0 0 48 40A48 40 0 0 0 0 0Z"/></svg>`));
+document.querySelectorAll('[data-ico]').forEach(x => x.outerHTML = ICO);
+document.addEventListener('click', e => {
+  if (e.target.closest('.all')) e.preventDefault();
+  if (!e.target.matches('.toggle')) return;
+  const open = e.target.previousElementSibling.classList.toggle('open');
+  e.target.textContent = open ? 'Read less' : 'Read more';
+  e.target.setAttribute('aria-expanded', open);
+});
+form.addEventListener('input', update);
+form.addEventListener('reset', () => setTimeout(update));
+let lastW = innerWidth;
+addEventListener('resize', () => { if (innerWidth !== lastW) { lastW = innerWidth; update(); } });
+$('panel').open = innerWidth > 700;
+update();
+document.fonts.ready.then(update);
+</script>
+</body>
+</html>
